@@ -18,7 +18,7 @@ Cursada 1c 2025 de Ingeniería de Software I
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/2/resumen.md)
 
 - [3 : No Silver Bullet (Brooks)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/3/No_Silver_Bullet.pdf)
-    -[Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/3/resumen.md)
+    - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/3/resumen.md)
 
 - [4 : The Power of Simplicity (Ungar y Smith)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/4/The%20Power%20of%20Simplicity.pdf)
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/4/resumen.md)
