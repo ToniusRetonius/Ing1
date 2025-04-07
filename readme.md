@@ -3,7 +3,7 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 # Resúmenes
 - [T1 : Historia SmallTalk](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T1.pdf)
--[T2 : Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
+- [T2 : Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
 
 # Prácticas
 - [P1 Parte A : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201a.pdf)
