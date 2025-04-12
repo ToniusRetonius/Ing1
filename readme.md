@@ -6,9 +6,11 @@ Cursada 1c 2025 de Ingeniería de Software I
 - [T2 : Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
 
 # Prácticas
-- [P1 Parte A : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201a.pdf)
-- [P1 Parte B : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201b.pdf)
-- [P2 Parte A : Código repetido](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/2/2a/solve.pdf)
+- [Parte 1 : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201a.pdf)
+- [Parte 1 : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201b.pdf)
+- [Parte 2 : Código repetido](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
+- [Parte 2 : Sacar Ifs](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/solve.pdf)
+
 
 # Papers con Resumen
 - [1 : Programming as Theory Building (Naur)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/1/Programming%20as%20Theory%20Building-1.pdf)
@@ -27,3 +29,6 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - [6 : Principios de Diseño de SmallTalk (Ingalls) (Publicación en Byte)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/6/Principios%20de%20Dise%C3%B1o%20de%20Smalltalk.pdf)
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/6/resumen.md)
+
+- [8 : Polymorphic Hierarchy (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/8/Polymorphic%20Hierarchy.pdf)
+    - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/8/resumen.md)
