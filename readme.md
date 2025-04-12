@@ -6,10 +6,13 @@ Cursada 1c 2025 de Ingeniería de Software I
 - [T2 : Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
 
 # Prácticas
-- [Parte 1 : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201a.pdf)
-- [Parte 1 : Intro al paradigma, el lenguaje y sus herramientas](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201b.pdf)
-- [Parte 2 : Código repetido](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
-- [Parte 2 : Sacar Ifs](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/solve.pdf)
+## Parte 1
+- [Intro al paradigma, el lenguaje y sus herramientas "a"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201a.pdf)
+- [Intro al paradigma, el lenguaje y sus herramientas "b"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201b.pdf)
+
+## Parte 2
+- [Código repetido](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
+- [Sacar Ifs](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/solve.pdf)
 
 
 # Papers con Resumen
