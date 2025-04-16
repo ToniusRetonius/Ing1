@@ -5,71 +5,87 @@ Object subclass: #Automobile
 	poolDictionaries: ''
 	category: '2.Replace-if-State'!
 
-!Automobile methodsFor: 'initialization' stamp: 'tom 4/8/2025 15:24:37'!
+!Automobile methodsFor: 'initialization' stamp: 't 4/14/2025 17:51:08'!
 initialize
 
-	state := AutomobileOff  new.
+	self turnOff.
 	speed := 0 * kilometer / hour! !
 
 
-!Automobile methodsFor: 'move' stamp: 'tom 4/8/2025 21:45:08'!
+!Automobile methodsFor: 'move' stamp: 't 4/14/2025 17:44:31'!
 accelerate
-	"sacamos los ifs porque tenemos que nosotros programadores hardcoderar el comportamiento en vez de dejar que los objetos se comuniquen entre sí. Los reemplazamos con la comunicación natural de los objetos. Reemplazando por polimorfismo. "
-	"state accelerate: self."
-		
-	! !
+	"Hicimos la jerarquía polimórfica, le pusimos el mismo nombre de mensaje y mandamos los cuerpos de los Ifs"
+	state accelerate .! !
 
-!Automobile methodsFor: 'move' stamp: 'tom 4/8/2025 15:47:48'!
-canAccelerate
-	speed := speed + (10 * kilometer / hour).! !
+!Automobile methodsFor: 'move' stamp: 't 4/14/2025 17:54:37'!
+accelerateWhenOff
+	self error: 'Can not accelerate when turned off'.! !
 
-!Automobile methodsFor: 'move' stamp: 'tom 4/8/2025 21:41:03'!
+!Automobile methodsFor: 'move' stamp: 't 4/14/2025 17:55:04'!
+accelerateWhenOn
+	speed := speed + (10 * kilometer / hour)! !
+
+!Automobile methodsFor: 'move' stamp: 't 4/14/2025 18:02:06'!
+speed
+	^speed.! !
+
+!Automobile methodsFor: 'move' stamp: 't 4/14/2025 17:56:02'!
+turnOff
+	"Qué pasa cuando inicializamos un auto ? Está apagado su estado... para modelar eso, queremos que el componente que sabe su estado, sepa de qué auto está representando el estado... para ello,  nos vamos a la Clase State Automobile"
+	state := AutomobileOff on: self.! !
+
+!Automobile methodsFor: 'move' stamp: 't 4/14/2025 17:56:52'!
 turnOn
-	
-	"state := AutomobileOn new."
-	state := AutomobileOn on:self .! !
+	"Análogo al turnOff, utilizamos el mensaje on: que conoce la super clase del AutomobileOn para que sepa a qué auto representa"
+	state := AutomobileOn on: self.! !
 
 
-!classDefinition: #EstadoAutomobile category: #'2.Replace-if-State'!
-Object subclass: #EstadoAutomobile
-	instanceVariableNames: 'AssociatedVehicle'
+!classDefinition: #StateAutomobile category: #'2.Replace-if-State'!
+Object subclass: #StateAutomobile
+	instanceVariableNames: 'myAutomobile'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: '2.Replace-if-State'!
 
-!EstadoAutomobile methodsFor: 'as yet unclassified' stamp: 'tom 4/8/2025 21:24:40'!
+!StateAutomobile methodsFor: 'move' stamp: 't 4/14/2025 17:49:41'!
 accelerate
 	self subclassResponsibility .! !
 
+
+!StateAutomobile methodsFor: 'init' stamp: 't 4/14/2025 17:53:04'!
+initializeStateOf: anAutomobile
+	myAutomobile := anAutomobile .! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'StateAutomobile class' category: #'2.Replace-if-State'!
+StateAutomobile class
+	instanceVariableNames: ''!
+
+!StateAutomobile class methodsFor: 'init' stamp: 't 4/14/2025 17:53:27'!
+on: anAutomobile
+	^ self new initializeStateOf: anAutomobile .! !
+
 
 !classDefinition: #AutomobileOff category: #'2.Replace-if-State'!
-EstadoAutomobile subclass: #AutomobileOff
+StateAutomobile subclass: #AutomobileOff
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: '2.Replace-if-State'!
 
-!AutomobileOff methodsFor: 'as yet unclassified' stamp: 'tom 4/8/2025 21:44:42'!
-"accelerate: anAutomobile
-	
-	anAutomobile error: 'Can not accelerate when turned off'."
-	
+!AutomobileOff methodsFor: 'move' stamp: 't 4/14/2025 17:55:24'!
 accelerate
-	AssociatedVehicle error:'Can not accelerate when turned off'.! !
+	myAutomobile accelerateWhenOff .! !
 
 
 !classDefinition: #AutomobileOn category: #'2.Replace-if-State'!
-EstadoAutomobile subclass: #AutomobileOn
+StateAutomobile subclass: #AutomobileOn
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: '2.Replace-if-State'!
 
-!AutomobileOn methodsFor: 'as yet unclassified' stamp: 'tom 4/8/2025 21:43:48'!
-"accelerate: anAutomomobile"
-	"si nosotros hacemos algo como : 
-	anAutomobile speed: (anAutomobile speed + ...)
-	de quién es la responsabilidad ? del estado del auto / motor ? o del auto ? Se rompe el encapsulamiento"
-	"anAutomomobile canAccelerate."
-accelerate 
-	AssociatedVehicle accelerate.	! !
+!AutomobileOn methodsFor: 'move' stamp: 't 4/14/2025 17:55:34'!
+accelerate
+	myAutomobile accelerateWhenOn ! !
