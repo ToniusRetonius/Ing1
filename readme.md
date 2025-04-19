@@ -7,8 +7,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 # Prácticas
 ## Parte 1
-- [Intro al paradigma, el lenguaje y sus herramientas "a"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201a.pdf)
-- [Intro al paradigma, el lenguaje y sus herramientas "b"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/1/solve%201b.pdf)
+- [Intro al paradigma, el lenguaje y sus herramientas "a"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/01-Parte-A/solve.pdf)
+- [Intro al paradigma, el lenguaje y sus herramientas "b"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/02-Parte-B/solve.pdf)
 
 ## Parte 2
 - [Código repetido](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
