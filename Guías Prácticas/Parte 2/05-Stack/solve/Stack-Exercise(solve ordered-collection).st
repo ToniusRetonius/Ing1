@@ -145,6 +145,66 @@ TestCase subclass: #SentenceFinderByPrefixTest
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
+!SentenceFinderByPrefixTest methodsFor: 'testing' stamp: 't 4/20/2025 15:07:45'!
+test01EmptyStackEmptyList
+	|stack listWithPhrases|
+	
+	stack := self createStack .
+	listWithPhrases  := self listWithPhrasesInStack: stack withPrefix: 'Hola'. 
+	
+	self assert: listWithPhrases isEmpty.
+	! !
+
+!SentenceFinderByPrefixTest methodsFor: 'testing' stamp: 't 4/20/2025 15:06:50'!
+test02NotEmptyStackNoMatch
+	|stack listWithPhrases|
+	
+	stack := self createStack.
+	stack push: 'null pattern'.
+	
+	listWithPhrases  := self listWithPhrasesInStack: stack withPrefix: 'Hola' .
+	
+	self assert: listWithPhrases isEmpty.
+	! !
+
+!SentenceFinderByPrefixTest methodsFor: 'testing' stamp: 't 4/20/2025 15:06:22'!
+test03NotEmptyStackManyMatchesInOrder
+	|stack listWithPhrases|
+	
+	stack := self createStack .
+	
+	stack push: 'Hola mundo'.
+	stack push: 'Hola ing1'.
+	stack push: 'Hola parcial'.
+	stack push: 'Hola ing2'.
+	
+	listWithPhrases  := self listWithPhrasesInStack: stack withPrefix: 'Hola'.
+	
+	self assert: (listWithPhrases size = 4).
+	self assert: ((listWithPhrases at: 1) = 'Hola mundo' ).
+	self assert: ((listWithPhrases at: 2) = 'Hola ing1' ).
+	self assert: ((listWithPhrases at: 3) = 'Hola parcial' ).
+	self assert: ((listWithPhrases at: 4) = 'Hola ing2' ).
+
+	! !
+
+
+!SentenceFinderByPrefixTest methodsFor: 'repeated code elimination' stamp: 't 4/20/2025 15:01:38'!
+createStack
+	|stack|
+	stack := OOStack new.
+	stack initialize .
+	^ stack ! !
+
+!SentenceFinderByPrefixTest methodsFor: 'repeated code elimination' stamp: 't 4/20/2025 15:05:51'!
+listWithPhrasesInStack: aStack withPrefix: aPrefix
+	
+	|sentenceFinder listWithPhrases|
+	
+	sentenceFinder := SentenceFinderByPrefix new.
+
+	^ listWithPhrases  := sentenceFinder findPhrasesWithPrefix: aPrefix inStack: aStack .! !
+
 
 !classDefinition: #OOStack category: #'Stack-Exercise'!
 Object subclass: #OOStack
@@ -153,16 +213,18 @@ Object subclass: #OOStack
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 't 4/11/2025 20:59:31'!
-collection
-	^ collection! !
-
-!OOStack methodsFor: 'as yet unclassified' stamp: 't 4/11/2025 20:57:56'!
+!OOStack methodsFor: 'initialization' stamp: 't 4/11/2025 20:57:56'!
 initialize
 	collection := OrderedCollection new.
 	! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 't 4/11/2025 21:33:50'!
+
+!OOStack methodsFor: 'adding' stamp: 't 4/11/2025 21:01:04'!
+push: anElement
+	collection add: anElement .! !
+
+
+!OOStack methodsFor: 'removing' stamp: 't 4/11/2025 21:33:50'!
 pop
 	|last |
 	
@@ -172,11 +234,12 @@ pop
 	
 	^ last .! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 't 4/11/2025 21:01:04'!
-push: anElement
-	collection add: anElement .! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 't 4/11/2025 21:22:30'!
+!OOStack methodsFor: 'accessing' stamp: 't 4/11/2025 20:59:31'!
+collection
+	^ collection! !
+
+!OOStack methodsFor: 'accessing' stamp: 't 4/11/2025 21:22:30'!
 top
 	collection isEmpty ifTrue: [self error: OOStack stackEmptyErrorDescription ].
 	^collection last.! !
@@ -200,26 +263,11 @@ Object subclass: #SentenceFinderByPrefix
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-
-!classDefinition: #StackState category: #'Stack-Exercise'!
-Object subclass: #StackState
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'Stack-Exercise'!
-
-
-!classDefinition: #Empty category: #'Stack-Exercise'!
-StackState subclass: #Empty
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'Stack-Exercise'!
-
-
-!classDefinition: #NotEmpty category: #'Stack-Exercise'!
-StackState subclass: #NotEmpty
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'Stack-Exercise'!
+!SentenceFinderByPrefix methodsFor: 'exploration' stamp: 't 4/20/2025 14:28:08'!
+findPhrasesWithPrefix: aPrefix inStack: aStack
+	"buscamos todas las palabras con aPrefix como prefijo de las frases almacenadas en el stack y las devolvemos en orden"
+	|lista|
+	lista := aStack collection .
+	
+	"como es una Ordered Collection..."
+	^ lista select: [:phrases | phrases beginsWith: aPrefix ]! !
