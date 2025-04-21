@@ -30,6 +30,10 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 
 - [Robot](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/IRobot-Enunciado(solve).st)
 
+- Números (opcional)
+    -[Pre -Números solución](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Exercise(solve).st)
+    -[Número solución](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
+
 
 # Papers con Resumen
 - [1 : Programming as Theory Building (Naur)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/1/Programming%20as%20Theory%20Building-1.pdf)
