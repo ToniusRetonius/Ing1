@@ -28,11 +28,11 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 
     - [04 - Strategy](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/04-Replace-If-Strat/4.Replace-if-Strategy(solve).st)
 
-- [Robot](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/IRobot-Enunciado(solve).st)
+- Robot [solve](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/IRobot-Enunciado(solve).st)
 
 - Números (opcional)
-    - [Pre -Números solución](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Exercise(solve).st)
-    - [Número solución](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
+    - Pre-Números [solve](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Exercise(solve).st)
+    - Número [solve](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
 
 
 # Papers con Resumen
