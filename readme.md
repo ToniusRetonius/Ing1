@@ -66,6 +66,6 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/9/resumen.md)
 
 - [10 : The Null Object Pattern (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/null_object.pdf)
-    -[Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/resumen.md)
+    - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/resumen.md)
 
 - [11 : The Object Recursion Pattern (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/The%20Object%20Recursion%20Pattern.pdf)
