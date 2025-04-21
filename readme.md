@@ -37,6 +37,7 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 - [Stack](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack)
 
     - [Solución con Ordered Collection](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(solve%20ordered-collection).st)
+    - [Solución con Lista Enlazada](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(lista%20enlazada).st)
     
 
 
@@ -60,3 +61,11 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 
 - [8 : Polymorphic Hierarchy (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/8/Polymorphic%20Hierarchy.pdf)
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/8/resumen.md)
+
+- [9 : A simple technique for handling multiple polymorphism - double dispatch](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/9/A%20simple%20technique%20for%20handling%20multiple%20polymorphism%20-%20double%20dispatch.pdf)
+    - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/9/resumen.md)
+
+- [10 : The Null Object Pattern (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/null_object.pdf)
+    -[Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/resumen.md)
+
+- [11 : The Object Recursion Pattern (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/The%20Object%20Recursion%20Pattern.pdf)
