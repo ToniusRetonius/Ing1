@@ -30,7 +30,7 @@ Esto ilustra el *Null Object Pattern*, que define *cómo crear una clase que enc
    Si parte del comportamiento es “no hacer nada”, lo más probable es que la mayoría o todo lo sea.
 
 ## Structure
-![Structure](/home/tonius/Desktop/Compu/Ingeniería del Software I/Papers/10/structure.png)
+![Structure](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/structure.png)
 
 ## Participants
 
