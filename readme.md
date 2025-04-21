@@ -34,6 +34,10 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 
 - [Robot](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/IRobot-Enunciado(solve).st)
 
+- [Stack](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack)
+
+    - [Solución con Ordered Collection](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(solve%20ordered-collection).st)
+    
 
 
 # Papers con Resumen
