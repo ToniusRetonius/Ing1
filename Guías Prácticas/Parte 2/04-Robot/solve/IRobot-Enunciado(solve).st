@@ -5,30 +5,37 @@ TestCase subclass: #CashierTest
 	poolDictionaries: ''
 	category: 'IRobot-Enunciado'!
 
-!CashierTest methodsFor: 'receiving from empty trailer' stamp: 't 4/19/2025 20:53:30'!
+!CashierTest methodsFor: 'receiving from empty trailer' stamp: 't 4/21/2025 18:44:12'!
 test01ShouldNotAcceptEmptyTrailerFromNormalWorkingRobot
-
-	self testingAcceptanceFromStatus: WorkingNormal withMessageError: Cashier trailerIsEmptyErrorDescription.
 	
-	! !
+	"La sintaxis utilizada en el closure nos permite pasar parámetros formales de bloque (closure). cuando se evalúa estos parámetros reciben los valores que se le pasan al momento de su ejecución. Esto se logra como se verá en el mensaje que abstrae estos test con value: value: (pues son dos parámetros, pero podrían ser más) "
 
-!CashierTest methodsFor: 'receiving from empty trailer' stamp: 't 4/19/2025 20:53:51'!
+	self shouldFail: Cashier trailerIsEmptyErrorDescription 
+		when: [:aRobot :aCashier | aCashier receiveOrder: aRobot ].
+! !
+
+!CashierTest methodsFor: 'receiving from empty trailer' stamp: 't 4/21/2025 18:36:40'!
 test02ShouldNotAcceptEmptyTrailerFromMechanicalFailureRobot
 
-	self testingAcceptanceFromStatus: MechanicalFailure withMessageError: Cashier trailerIsEmptyErrorDescription.
+	self shouldFail: Cashier trailerIsEmptyErrorDescription 
+		when: [:aRobot :aCashier |  aRobot withMechanicalFailure.  aCashier receiveOrder: aRobot ].
 ! !
 
 
-!CashierTest methodsFor: 'receiving from sensors failure robot' stamp: 't 4/19/2025 20:54:32'!
+!CashierTest methodsFor: 'receiving from sensors failure robot' stamp: 't 4/21/2025 18:36:50'!
 test03ShouldNotAcceptSensorsFailureRobot
+
+	self shouldFail: (Cashier robotSensorsFailureErrorDescription) 
+		when: [:aRobot :aCashier | aRobot withSensorsFailure. aCashier receiveOrder: aRobot].
 	
-	self testingAcceptanceFromStatus: SensorsFailure withMessageError: Cashier robotSensorsFailureErrorDescription.
+			
+	
 ! !
 
 
-!CashierTest methodsFor: 'elimination of repeated code' stamp: 't 4/19/2025 20:52:50'!
-testingAcceptanceFromStatus: status withMessageError: aMessage
-
+!CashierTest methodsFor: 'elimination of repeated code' stamp: 't 4/21/2025 18:46:26'!
+shouldFail: anError when: aBlock
+	
 	| aRobot aTrailer aCashier |
 	
 	aTrailer := Trailer with: 20 and: 100.
@@ -37,35 +44,18 @@ testingAcceptanceFromStatus: status withMessageError: aMessage
 	aCashier := Cashier new.
 
 	self
-		should: [ 
-			aRobot status.
-			aCashier receiveOrder: aRobot 
-		]
+	"acá en runtime del test tomamos ese bloque y le asignamos al primer parámetro aRobot y al segundo aCashier y luego evaluamos el bloque"
+		should: [  aBlock value: aRobot value: aCashier ]
 		raise: Error
-		withMessageText: Cashier trailerIsEmptyErrorDescription.
-! !
+		withMessageText: anError .! !
 
 
-!CashierTest methodsFor: 'receiving from mechanical failure robot' stamp: 'F 5/20/2020 23:47:15'!
+!CashierTest methodsFor: 'receiving from mechanical failure robot' stamp: 't 4/21/2025 18:39:49'!
 test04ShouldChangeRobotStatusToOutOfOrderWhenMechanicalFailureRobot
 
-	| aRobot aTrailer aCashier |
+	self shouldFail: Robot outOfOrderErrorDescription 
+		when: [:aRobot :aCashier | aRobot take: (ProductA with: 1  and: 1). aRobot withMechanicalFailure. aCashier receiveOrder: aRobot. aRobot take: (ProductA with: 1 and: 1)]
 	
-	aTrailer := Trailer with: 20 and: 100.
-	aRobot := Robot with: aTrailer.
-	
-	aCashier := Cashier new.
-
-	self
-		should: [ 
-			aRobot take: (ProductA with: 1  and: 1).
-			aRobot withMechanicalFailure.
-			
-			aCashier receiveOrder: aRobot.
-			
-			aRobot take: (ProductA with: 1 and: 1) ]
-		raise: Error
-		withMessageText: Robot outOfOrderErrorDescription.
 
 ! !
 
