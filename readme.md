@@ -28,11 +28,12 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 
     - [04 - Strategy](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/04-Replace-If-Strat/4.Replace-if-Strategy(solve).st)
 
-- [Robot](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/IRobot-Enunciado(solve).st)
-
 - [Números (opcional)](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional))
     - [Pre-Números](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Exercise(solve).st)
     - [Número](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
+
+- [Robot](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/IRobot-Enunciado(solve).st)
+
 
 
 # Papers con Resumen
