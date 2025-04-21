@@ -11,7 +11,7 @@ No están los .st (SmallTalk Source Code File)
 - [Intro al paradigma, el lenguaje y sus herramientas "a"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/01-Parte-A/solve.pdf)
 - [Intro al paradigma, el lenguaje y sus herramientas "b"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/02-Parte-B/solve.pdf)
 
-## Parte 2 
+## Parte 2 - Repeated Code y Double Dispatch
 Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en determinado momento. 
 - [Código repetido](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve)
     
