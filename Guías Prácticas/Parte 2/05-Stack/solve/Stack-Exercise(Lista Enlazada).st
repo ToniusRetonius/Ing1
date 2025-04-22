@@ -144,6 +144,52 @@ TestCase subclass: #SentenceFinderByPrefixTest
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
+!SentenceFinderByPrefixTest methodsFor: 'test' stamp: 't 4/22/2025 17:14:32'!
+test01EmptyListEmptyStack
+	
+	|matches|
+	
+	matches :=  self listWithMatchesInStackWith: [:stack| stack ] andPrefix: 'Hola'.
+	
+	self assert:  (matches size = 0). ! !
+
+!SentenceFinderByPrefixTest methodsFor: 'test' stamp: 't 4/22/2025 17:13:13'!
+test02NoMatchNotEmptyStack
+	|matches|
+	
+	matches := self listWithMatchesInStackWith: [:stack | stack push:'Mundo'] andPrefix: 'Hola'.
+	
+	self assert:  (matches size = 0). ! !
+
+!SentenceFinderByPrefixTest methodsFor: 'test' stamp: 't 4/22/2025 17:16:11'!
+test03MatchesInOrderCaseSensitiveNotEmptyStack
+	|matches|
+	
+	matches := self listWithMatchesInStackWith: 
+	[:stack | 
+		stack push:'Hola'. 
+		stack push:'hola'. 
+		stack push:'Hola Mundo'.] 
+	andPrefix: 'Hola'.
+	
+	self assert: (matches at:1) = 'Hola Mundo'.
+	self assert: (matches at:2) = 'Hola'.
+	! !
+
+
+!SentenceFinderByPrefixTest methodsFor: 'remove repeated code' stamp: 't 4/22/2025 17:12:05'!
+listWithMatchesInStackWith: aBlock andPrefix: aPrefix
+	|stack finder matches|
+	stack := OOStack new.
+	
+	aBlock value: stack.
+	
+	finder := SentenceFinderByPrefix new.
+	
+	matches :=  finder findIn: stack wordsWithPrefix: aPrefix .
+	
+	^matches ! !
+
 
 !classDefinition: #OOStack category: #'Stack-Exercise'!
 Object subclass: #OOStack
@@ -232,6 +278,23 @@ Object subclass: #SentenceFinderByPrefix
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
+
+!SentenceFinderByPrefix methodsFor: 'find' stamp: 't 4/21/2025 19:18:11'!
+findIn: aStack wordsWithPrefix: aPrefix
+	
+	|it nulo coleccion res| 
+	
+	it := aStack first .
+	nulo := NullElement new.
+	coleccion := OrderedCollection new.
+	
+	[it isKindOf: NullElement ] whileFalse: [coleccion add: it value. it := it previous ].
+	
+	res := coleccion select:[:phrase | phrase beginsWith: aPrefix ].
+	
+	^ res
+	
+	! !
 
 
 !classDefinition: #StackElement category: #'Stack-Exercise'!
