@@ -12,4 +12,23 @@ La alternativa orientada a objetos es *delegar la comparación a los propios obj
 
 Por ejemplo, un objeto *Engine* puede definirse como equivalente a otro si coinciden su tamaño y potencia, los cuales son enteros comparables nativamente. Si los atributos fueran más complejos, ellos mismos aplicarían el mismo principio. Así, se construye una comparación profunda y recursiva sin necesidad de un comparador centralizado.
 
+![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagrama%201.png)
+![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagrama%202.png)
 
+## Keys
+Un sistema que utiliza el patrón *Object Recursion* presenta las siguientes características esenciales:
+
+- Dos clases polimórficas: una maneja el mensaje de forma recursiva y la otra lo procesa directamente sin recursión.
+
+- Un mensaje iniciador, generalmente enviado desde una tercera clase no polimórfica con respecto a las anteriores, que da comienzo al proceso recursivo.
+
+## Applicability 
+Aplica el patrón Object Recursion en sistemas con estructuras enlazadas cuando:
+
+- Se debe pasar un mensaje a través de la estructura sin conocer de antemano su destino final.
+
+- Es necesario difundir un mensaje a todos los nodos de una parte de la estructura.
+
+- Se desea distribuir la responsabilidad de un comportamiento entre múltiples objetos dentro de dicha estructura.
+
+## 
