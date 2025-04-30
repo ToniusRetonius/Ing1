@@ -12,8 +12,8 @@ La alternativa orientada a objetos es *delegar la comparación a los propios obj
 
 Por ejemplo, un objeto *Engine* puede definirse como equivalente a otro si coinciden su tamaño y potencia, los cuales son enteros comparables nativamente. Si los atributos fueran más complejos, ellos mismos aplicarían el mismo principio. Así, se construye una comparación profunda y recursiva sin necesidad de un comparador centralizado.
 
-![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagrama%201.png)
-![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagrama%202.png)
+![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagramas/diagrama%201.png)
+![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagramas/diagrama%202.png)
 
 ## Keys
 Un sistema que utiliza el patrón *Object Recursion* presenta las siguientes características esenciales:
@@ -32,7 +32,7 @@ Aplica el patrón Object Recursion en sistemas con estructuras enlazadas cuando:
 - Se desea distribuir la responsabilidad de un comportamiento entre múltiples objetos dentro de dicha estructura.
 
 ## Structure
-![Structure](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/structure.png)
+![Structure](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagramas/structure.png)
 
 ## Participants
 En el patrón Object Recursion, intervienen los siguientes participantes:
@@ -47,6 +47,7 @@ En el patrón Object Recursion, intervienen los siguientes participantes:
 
 ## Collaboration
 En el patrón Object Recursion, la colaboración entre los participantes sigue un flujo claro: el Initiator inicia una solicitud pidiéndole a un Handler que la procese. Si el Handler es un Recurser, este realiza el trabajo necesario y luego delega la solicitud a uno de sus sucesores (también Handler). Tras recibir el resultado del sucesor, puede complementarlo con lógica adicional, ejecutada antes o después de la delegación. Si tiene múltiples sucesores, puede delegar a cada uno de ellos de forma secuencial o incluso asincrónica. En cambio, si el Handler es un Terminator, procesa la solicitud completamente por sí mismo, sin delegarla, y devuelve el resultado correspondiente.
+![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagramas/collab%20diagram.png)
 
 ## Consequences
 El uso del patrón Object Recursion ofrece varias ventajas significativas. En primer lugar, permite *distributed processing*, ya que la solicitud se reparte entre múltiples objetos Handler organizados de la forma más adecuada para cumplir con la tarea. Además, brinda *responsibility flexibility*, puesto que el Initiator no necesita conocer la cantidad, organización o lógica interna de los Handlers; simplemente realiza la solicitud y deja que el sistema la resuelva. Esta organización puede incluso modificarse dinámicamente en tiempo de ejecución.
@@ -67,4 +68,32 @@ Todos los objetos, por más complejo que sea, se compone de objetos simples (pri
 El ejemplo plantea el caso de un objeto que representa la guía telefónica donde se almacena su nombre y número. En este escenario la recursión tiene dos niveles porque *DirectoryEntry.equals()* llama a
 *PersonName.equals()*, que llama a *String.equals().* 
 Como se ve a continuación:
-![]()
+![Diagrama](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/diagramas/sample%20code.png)
+
+## Known Uses
+El patrón de Recursión de Objetos se usa en muchos contextos de programación:
+
+- *Equality*: utiliza *one-step recursion*. Cada implementador de equals también necesita un hash recursivo correspondiente.
+
+- *Copy o clone*: usa *two-step recursion*. *copy()* llama a *simpleCopy()* (copia la raíz) y luego a *postCopy()* (copia las partes). *postCopy()* continúa la recursión.
+
+- *Serialization algorithms*: recorre recursivamente el objeto, serializando primero la raíz y luego sus partes. Termina al llegar a objetos simples.
+
+- *Object as String (toString, printString)*: convierte el objeto en texto comenzando por la raíz y luego pidiendo a cada parte que se represente a sí misma.
+
+- *Tree structures*: pueden usar recursión para enviar mensajes desde hojas al nodo raíz o desde la raíz a todas las hojas (ej., en árboles gráficos para actualizar o redistribuir visualizaciones).
+
+## Related Patterns
+Este patrón se relaciona con otros, pero se distingue principalmente por ser un patrón de comportamiento, no estructural:
+
+- Vs. *Composite* y *Decorator*: aunque ambos pueden parecer recursivos al delegar a *Compsites* o hijos, su recursión es estructural y de solo un nivel. En cambio, la Recursión de Objetos es algorítmica y de profundidad ilimitada.
+
+- Vs. *Chain of Responsibility*: usa directamente Recursión de Objetos para pasar solicitudes a través de una estructura jerárquica o en cadena, buscando el *handler* adecuado.
+
+- Vs. *Adapter*: una cadena de *Adapters* puede parecer recursiva, pero no lo es realmente porque la delegación no es polimórfica, lo cual contradice el principio del *Object Recursion*.
+
+- Vs. *Interpreter*: el mensaje interpret() se aplica recursivamente a través del árbol de expresiones. Aquí se identifican claramente los roles del patrón de Recursión de Objetos: el *Client* (Initiator), la  *AbstractExpression* (Handler), la *NonTerminalExpression* (Recurser) y la *TerminalExpression* (Terminator).
+
+- Vs. *Iterator*: los iteradores internos sobre listas enlazadas o árboles pueden implementar recursión de objetos si el final está marcado por objetos del mismo tipo. Si usan null, la recursión es solo procedural.
+
+- Vs. *Delegation* (como en Proxy): delegar un mensaje al mismo tipo de objeto es una forma simple de recursión de objetos, pero solo de un nivel.
