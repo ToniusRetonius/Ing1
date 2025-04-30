@@ -69,3 +69,7 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/10/resumen.md)
 
 - [11 : The Object Recursion Pattern (Bobby Woolf)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/The%20Object%20Recursion%20Pattern.pdf)
+    - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/resumen.md)
+
+- [12 : SmallTalk BestPractice Pattern - Method Object](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/Smalltalk%20best%20practice%20patterns-%20method%20object.pdf)
+    - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/resumen.md)
