@@ -31,4 +31,40 @@ Aplica el patrón Object Recursion en sistemas con estructuras enlazadas cuando:
 
 - Se desea distribuir la responsabilidad de un comportamiento entre múltiples objetos dentro de dicha estructura.
 
-## 
+## Structure
+![Structure](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/11/structure.png)
+
+## Participants
+En el patrón Object Recursion, intervienen los siguientes participantes:
+
+- **Initiator** (*Cliente*): Es quien inicia la solicitud mediante un mensaje como makeRequest(). Generalmente no es una subclase de Handler, y su mensaje es distinto del que los manejadores usan (handleRequest()).
+
+- **Handler** (*Comparable*): Define el tipo de objetos que pueden manejar las solicitudes iniciadas por el cliente. Actúa como interfaz común para los objetos que participan en la recursión.
+
+- **Recurser** (*Engine*): Es un tipo específico de Handler que mantiene una referencia a uno o más sucesores. Maneja la solicitud delegándola a sus sucesores, pudiendo ejecutar lógica adicional antes o después de dicha delegación. Un Recurser puede, en otros contextos, actuar como terminador.
+
+- **Terminator** (*Integer*): Concluye el procesamiento de la solicitud implementándola completamente sin delegarla. También puede funcionar como Recurser en solicitudes distintas.
+
+## Collaboration
+En el patrón Object Recursion, la colaboración entre los participantes sigue un flujo claro: el Initiator inicia una solicitud pidiéndole a un Handler que la procese. Si el Handler es un Recurser, este realiza el trabajo necesario y luego delega la solicitud a uno de sus sucesores (también Handler). Tras recibir el resultado del sucesor, puede complementarlo con lógica adicional, ejecutada antes o después de la delegación. Si tiene múltiples sucesores, puede delegar a cada uno de ellos de forma secuencial o incluso asincrónica. En cambio, si el Handler es un Terminator, procesa la solicitud completamente por sí mismo, sin delegarla, y devuelve el resultado correspondiente.
+
+## Consequences
+El uso del patrón Object Recursion ofrece varias ventajas significativas. En primer lugar, permite *distributed processing*, ya que la solicitud se reparte entre múltiples objetos Handler organizados de la forma más adecuada para cumplir con la tarea. Además, brinda *responsibility flexibility*, puesto que el Initiator no necesita conocer la cantidad, organización o lógica interna de los Handlers; simplemente realiza la solicitud y deja que el sistema la resuelva. Esta organización puede incluso modificarse dinámicamente en tiempo de ejecución.
+
+Otra ventaja es la *role flexibility*: un mismo Handler puede comportarse como Recurser en una solicitud y como Terminator en otra, según el contexto. Por último, mejora la *encapsulación*, ya que cada objeto maneja internamente cómo debe procesarse la solicitud.
+
+No obstante, este patrón también presenta una desventaja: aumento de la *programming complexity*. La recursión, tanto procedural como orientada a objetos, puede ser difícil de entender y mantener, y su uso excesivo puede complicar el diseño del sistema.
+
+## Implementation
+Al implementar el patrón de Recursión de Objetos, se deben considerar dos aspectos importantes:
+
+- *Separated initiator type*: El método Initiator.makeRequest() no debe ser polimórfico con Recursor.handleRequest(). Si todos los remitentes de un método son implementadores del mismo mensaje, y no existe un método externo no polimórfico que inicie la recursión, esos métodos pueden eliminarse sin afectar el programa.
+
+- *Defining the succesor*: El Recurser necesita uno o más sucesores, pero el Terminator no. Aunque el Terminator herede el enlace al sucesor, lo ignora en sus métodos. Si todos sus métodos ignoran el sucesor, el valor puede ser nulo y el enlace no es necesario.
+
+## Sample Code
+Todos los objetos, por más complejo que sea, se compone de objetos simples (primitivas). Las comparaciones entre primitivas son directas y por tanto, actuarán como caso base de la recursión. 
+El ejemplo plantea el caso de un objeto que representa la guía telefónica donde se almacena su nombre y número. En este escenario la recursión tiene dos niveles porque *DirectoryEntry.equals()* llama a
+*PersonName.equals()*, que llama a *String.equals().* 
+Como se ve a continuación:
+![]()
