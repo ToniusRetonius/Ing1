@@ -6,13 +6,15 @@ Cursada 1c 2025 de Ingeniería de Software I
 - [T2 : Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
 
 # Prácticas
+Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
+
 ## Parte 1 - Introducción a SmallTalk
 No están los .st (SmallTalk Source Code File)
 - [Intro al paradigma, el lenguaje y sus herramientas "a"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/01-Parte-A/solve.pdf)
 - [Intro al paradigma, el lenguaje y sus herramientas "b"](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/02-Parte-B/solve.pdf)
 
 ## Parte 2 - Repeated Code y Double Dispatch
-Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en determinado momento. 
+Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo en determinado momento. 
 - [Código repetido](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve)
     
     - [Breve Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
@@ -39,7 +41,6 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
     - [Solución con Ordered Collection](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(solve%20ordered-collection).st)
     - [Solución con Lista Enlazada](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(lista%20enlazada).st)
     
-
 
 # Papers con Resumen
 - [1 : Programming as Theory Building (Naur)](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/1/Programming%20as%20Theory%20Building-1.pdf)
@@ -73,3 +74,4 @@ Están los .st y en algunos caso, un breve repaso teórico sobre qué se hizo en
 
 - [12 : SmallTalk BestPractice Pattern - Method Object](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/Smalltalk%20best%20practice%20patterns-%20method%20object.pdf)
     - [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/resumen.md)
+
