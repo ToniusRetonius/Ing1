@@ -103,9 +103,10 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1(solve).st)
 
-- 2C2022 : Piratas
+- 2C2022 : Piratas (en mi solución tomé un par de cosas del solve de Hernán)
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-Parcial-1-Enunciado.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial(parte%20de%20solucion%20hernan).st)
 
 
 - 1C2024 : Sims Hotels 
