@@ -143,15 +143,15 @@ defaultPriceList
 		at: self guestTypeConference put: 200*peso;
 		yourself ! !
 
-!FloorTest methodsFor: 'create' stamp: 't 4/28/2025 18:53:37'!
+!FloorTest methodsFor: 'create' stamp: 't 5/1/2025 18:30:08'!
 guestTypeConference
 	
-	^ ConferenceGuest ! !
+	^ #ConferenceGuest ! !
 
-!FloorTest methodsFor: 'create' stamp: 't 4/28/2025 18:52:59'!
+!FloorTest methodsFor: 'create' stamp: 't 5/1/2025 18:29:58'!
 guestTypeVacation
 	
-	^ VacationGuest ! !
+	^ #VacationGuest ! !
 
 
 !classDefinition: #HotelTest category: #'ISW1-2024-1C-Parcial'!
@@ -418,15 +418,15 @@ floorWithNumberOfRoomsAndDefaultPrice: aNumberOfRooms
 
 	^ self createFloorWith: aNumberOfRooms and: self defaultPriceList! !
 
-!HotelTest methodsFor: 'create' stamp: 't 4/28/2025 18:54:16'!
+!HotelTest methodsFor: 'create' stamp: 't 5/1/2025 18:30:54'!
 guestTypeConference
 	
-	^ ConferenceGuest ! !
+	^ #ConferenceGuest ! !
 
-!HotelTest methodsFor: 'create' stamp: 't 4/28/2025 18:54:27'!
+!HotelTest methodsFor: 'create' stamp: 't 5/1/2025 18:30:50'!
 guestTypeVacation
 	
-	^ VacationGuest ! !
+	^ #VacationGuest ! !
 
 !HotelTest methodsFor: 'create' stamp: 't 4/28/2025 16:13:01'!
 hotelCreationDefault
@@ -740,15 +740,15 @@ defaultPriceList
 		at: self guestTypeConference put: self maxPriceInList;
 		yourself ! !
 
-!RoomTest methodsFor: 'create' stamp: 't 4/28/2025 18:54:44'!
+!RoomTest methodsFor: 'create' stamp: 't 5/1/2025 18:30:47'!
 guestTypeConference
 	
-	^ ConferenceGuest ! !
+	^ #ConferenceGuest ! !
 
-!RoomTest methodsFor: 'create' stamp: 't 4/28/2025 18:54:51'!
+!RoomTest methodsFor: 'create' stamp: 't 5/1/2025 18:30:42'!
 guestTypeVacation
 	
-	^ VacationGuest ! !
+	^ #VacationGuest ! !
 
 !RoomTest methodsFor: 'create' stamp: 'FRT 4/22/2024 10:16:13'!
 maxPriceInList
@@ -783,34 +783,26 @@ rooms
 	^ rooms! !
 
 
-!Floor methodsFor: 'accounting' stamp: 't 4/28/2025 14:54:19'!
+!Floor methodsFor: 'accounting' stamp: 't 5/1/2025 18:53:38'!
 totalLosses
 	
-	| total |
 	
-	total := 0*peso.
-	rooms do: [ :room | room isAvailable ifTrue: [ total := total + prices values max ] ].
+	^(rooms select:[:room | room isAvailable ]) inject: 0 * peso  into: [:suma :each | suma + prices values max].
 
-	^ total
-! !
+	
+	"muy parecido a lo que hicimos en total profits filtramos la lista a los available, y luego acumulamos "
+	"select hace uso de un bloque que devuelve bool, en comparación al collect que TRANSFORMA los elementos según se especifique en el bloque"! !
 
-!Floor methodsFor: 'accounting' stamp: 't 4/28/2025 19:09:51'!
+!Floor methodsFor: 'accounting' stamp: 't 5/1/2025 18:54:27'!
 totalProfits
 
-	| total |
-	
-	total := 0*peso.
-	rooms do: [ :room | 
-		| roomTotal | 
-		room isOccupied 
-		ifTrue: [
-			roomTotal := 	room profitUsing: prices ifAbsentGuestType: [ self class signalUnknownGuestType ].
-			total := total + roomTotal.
-		]
-	].
-
-	^ total
-	"select... thenDo: cómo lo uso ? "
+	^ (rooms 
+		select: [:room | room isOccupied]
+		thenCollect: [:room |  room profitUsing: prices  ifAbsentGuestType: [ self class signalUnknownGuestType ]]) 
+		inject: 0*peso into: [:sum :each | sum + each ].
+		
+		"seleccionamos el room ocupado y con collect a cada elemento seleccionado le aplicamos el bloque (COLLECT TRANSFORMA) "
+		"obtenemos una lista, que luego, con inject into acumulamos el valor con cada elemento, eso lo hacemos usando sum como acumulador y each como elemento de la lista anterior"
 	! !
 
 
@@ -967,48 +959,6 @@ with: aNumberOfRooms andPriceList: aPriceList
 	^self new initializeFloorWith: aNumberOfRooms andPriceList: aPriceList ! !
 
 
-!classDefinition: #Guest category: #'ISW1-2024-1C-Parcial'!
-Object subclass: #Guest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'ISW1-2024-1C-Parcial'!
-
-"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
-
-!classDefinition: 'Guest class' category: #'ISW1-2024-1C-Parcial'!
-Guest class
-	instanceVariableNames: ''!
-
-!Guest class methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 17:11:44'!
-emptyRoomOn: aRoom
-	^ NoGuest new ! !
-
-
-!classDefinition: #ConferenceGuest category: #'ISW1-2024-1C-Parcial'!
-Guest subclass: #ConferenceGuest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'ISW1-2024-1C-Parcial'!
-
-
-!classDefinition: #NoGuest category: #'ISW1-2024-1C-Parcial'!
-Guest subclass: #NoGuest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'ISW1-2024-1C-Parcial'!
-
-
-!classDefinition: #VacationGuest category: #'ISW1-2024-1C-Parcial'!
-Guest subclass: #VacationGuest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'ISW1-2024-1C-Parcial'!
-
-
 !classDefinition: #Hotel category: #'ISW1-2024-1C-Parcial'!
 Object subclass: #Hotel
 	instanceVariableNames: 'floors availableRoomsCount'
@@ -1016,26 +966,18 @@ Object subclass: #Hotel
 	poolDictionaries: ''
 	category: 'ISW1-2024-1C-Parcial'!
 
-!Hotel methodsFor: 'accounting' stamp: 'FRT 4/21/2024 00:02:28'!
+!Hotel methodsFor: 'accounting' stamp: 't 5/1/2025 18:48:46'!
 totalLosses
 
-	| acc |
+	^floors inject: 0*peso into:[:sum : floor | sum + floor totalLosses ] 
 	
-	acc := 0.
-	floors do: [ :floor | acc := acc + floor totalLosses ]. 
-
-	^ acc.
+	"el primer parámetro del bloque es el acumulador siempre, luego el elemento que estamos viendo"
 ! !
 
-!Hotel methodsFor: 'accounting' stamp: 't 4/28/2025 14:14:04'!
+!Hotel methodsFor: 'accounting' stamp: 't 5/1/2025 18:49:23'!
 totalProfits
 
-	| acc |
-	
-	acc := 0.
-	floors do: [ :floor | acc := acc + floor totalProfits ]. 
-
-	^ acc.
+	^ floors inject: 0*peso into:[:suma :floor | suma + floor totalProfits ] 
 	
 	! !
 
@@ -1057,29 +999,14 @@ setFloors: aFloorsCollection
 	availableRoomsCount := self totalRooms.! !
 
 
-!Hotel methodsFor: 'totals' stamp: 'FRT 4/22/2024 11:43:27'!
+!Hotel methodsFor: 'totals' stamp: 't 5/1/2025 19:13:53'!
 totalRooms
-
-	| ix acc |
-
-	acc := 0.
-
-	ix := 1.	
-	[ ix <= floors size ] whileTrue: [ | floor jx |
-		floor := floors at: ix.
-
-		jx := 1.
-		[ jx <= floor rooms size ] whileTrue: [ 
-			acc := acc + 1.
-			
-			jx := jx + 1.
-		].
-			
-		ix := ix + 1.				
-	].
-
-	^ acc.
-
+	
+	"la primera vez lo hice así : 
+	^(floors collect:[:floor | floor rooms count:[:room | room = room] ]) inject:0 into:[:total :subtotal | total + subtotal]
+	"
+	"pero es mejor no comparar algo que siempre da true y usar"
+	^(floors collect:[:floor | floor rooms size]) inject:0 into:[:total :subtotal | total + subtotal]
 ! !
 
 !Hotel methodsFor: 'totals' stamp: 'FRT 4/22/2024 11:43:00'!
@@ -1088,85 +1015,30 @@ totalRoomsAvailable
 	^ availableRoomsCount.
 ! !
 
-!Hotel methodsFor: 'totals' stamp: 'FRT 4/22/2024 11:42:53'!
+!Hotel methodsFor: 'totals' stamp: 't 5/1/2025 18:58:21'!
 totalRoomsOccupied
-
-	| ix acc |
-
-	acc := 0.
-
-	ix := 1.	
-	[ ix <= floors size ] whileTrue: [ | floor jx |
-		floor := floors at: ix.
-
-		jx := 1.
-		[ jx <= floor rooms size ] whileTrue: [ | room | 
-			room := floor rooms at: jx.
-			room isOccupied ifTrue: [ 			acc := acc + 1. ].
-			
-			jx := jx + 1.
-		].
-			
-		ix := ix + 1.				
-	].
-
-	^ acc.
-
+	
+	"lo que hace esto es ver los que están ocupados POR PISO, contar cuántos por piso, y finalmente foldear la lista"
+	
+	^ (floors collect: [:floor | floor rooms count:[:room | room isOccupied ]]) inject: 0 into:[:total :cuenta | total + cuenta] 
 ! !
 
-!Hotel methodsFor: 'totals' stamp: 'FRT 4/22/2024 11:43:13'!
+!Hotel methodsFor: 'totals' stamp: 't 5/1/2025 19:00:28'!
 totalRoomsReserved
-
-	| ix acc |
-
-	acc := 0.
-
-	ix := 1.	
-	[ ix <= floors size ] whileTrue: [ | floor jx |
-		floor := floors at: ix.
-
-		jx := 1.
-		[jx <= floor rooms size] whileTrue: [ | room | 
-			room := floor rooms at: jx.
-			room isReserved ifTrue: [ 			acc := acc + 1. ].
-			
-			jx := jx + 1.
-		].
-			
-		ix := ix + 1.				
-	].
-
-	^ acc.
-
+	
+	"count siempre recibe una condición para contar"
+	^ (floors collect:[:floor | floor rooms count:[: room | room isReserved ]]) inject: 0 into:[:total :subtotal| total + subtotal ] 
+	
 ! !
 
 
-!Hotel methodsFor: 'testing' stamp: 't 4/28/2025 15:53:59'!
+!Hotel methodsFor: 'testing' stamp: 't 5/1/2025 19:06:46'!
 isEmpty
 
-	| ix acc |
-	
-	acc := true.
-
-	ix := 1.	
-	[ ix <= floors size ] whileTrue: [ | floor jx |
-		floor := floors at: ix.
-
-		jx := 1.
-		[ jx <= floor rooms size ] whileTrue: [ | room |
-			room := floor rooms at: jx.
-			acc := acc and: room isAvailable.
-			
-			jx := jx + 1.
-		].
-			
-		ix := ix + 1.				
-	].
-
-	^ acc.
-	
-	"ver si con dos inject into esto sale "
-! !
+	"para saber si el hotel está vacío, tendríamos que ver que todas están libres o que alguna no lo esté"
+	"si algun room en cierto piso no está libre --> false ifNone -> true"
+	^ floors detect: [:floor | floor rooms anySatisfy: [:room | room isAvailable not ]] ifNone: true
+	! !
 
 
 !Hotel methodsFor: 'guests' stamp: 'FRT 4/25/2024 21:45:24'!
@@ -1288,6 +1160,19 @@ reserve
 	"Room Occupied"
 	state canIReserveTheRoom: self! !
 
+!Room methodsFor: 'guests' stamp: 't 4/28/2025 17:22:25'!
+youCanReceive: aGuestType 
+	guest := aGuestType. 
+	state := RoomState occupiedOn: self! !
+
+!Room methodsFor: 'guests' stamp: 't 4/28/2025 17:28:40'!
+youCanReserveTheRoom
+	state := RoomState reservedOn: self! !
+
+!Room methodsFor: 'guests' stamp: 't 4/28/2025 17:19:20'!
+youCannotReceive
+	self error: self class roomIsNotEmptyErrorDescription! !
+
 
 !Room methodsFor: 'testing' stamp: 't 4/28/2025 17:06:03'!
 isAvailable
@@ -1314,24 +1199,10 @@ profitUsing: aPriceList ifAbsentGuestType: unknownGuestTypeBlock
 	! !
 
 
-!Room methodsFor: 'initialize' stamp: 't 4/28/2025 17:11:14'!
+!Room methodsFor: 'initialize' stamp: 't 5/1/2025 18:30:36'!
 initializeAvailable
 	state := RoomState availableOn: self.
-	guest := Guest emptyRoomOn: self.! !
-
-
-!Room methodsFor: 'aaaa' stamp: 't 4/28/2025 17:22:25'!
-youCanReceive: aGuestType 
-	guest := aGuestType. 
-	state := RoomState occupiedOn: self! !
-
-!Room methodsFor: 'aaaa' stamp: 't 4/28/2025 17:28:40'!
-youCanReserveTheRoom
-	state := RoomState reservedOn: self! !
-
-!Room methodsFor: 'aaaa' stamp: 't 4/28/2025 17:19:20'!
-youCannotReceive
-	self error: self class roomIsNotEmptyErrorDescription! !
+	! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -1396,35 +1267,36 @@ RoomState subclass: #RoomAvailable
 	poolDictionaries: ''
 	category: 'ISW1-2024-1C-Parcial'!
 
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 17:15:57'!
+!RoomAvailable methodsFor: 'guest' stamp: 't 4/28/2025 17:15:57'!
 canI: aRoom receive: aGuestType 
 	
 	aRoom youCanReceive: aGuestType ! !
 
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 17:27:11'!
+!RoomAvailable methodsFor: 'guest' stamp: 't 4/28/2025 17:27:11'!
 canIReserveTheRoom: aRoom 
 	aRoom youCanReserveTheRoom
 		! !
 
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:32:42'!
-isAvailable
-	^ true! !
-
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:51:30'!
-isOccupied
-	^ false! !
-
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:52:15'!
-isReserved
-	^ false! !
-
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 18:05:05'!
+!RoomAvailable methodsFor: 'guest' stamp: 't 4/28/2025 18:05:05'!
 profitUsing: aPriceList withGuest: aGuest ifAbsent: unknownGuestTypeBlock 
 	 ^ 0* peso! !
 
-!RoomAvailable methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 18:14:02'!
+!RoomAvailable methodsFor: 'guest' stamp: 't 4/28/2025 18:14:02'!
 receiveGuestWithReservation: aGuestType inRoom: aRoom 
 	self error: Room  roomIsNotReservedErrorDescription! !
+
+
+!RoomAvailable methodsFor: 'assertion' stamp: 't 4/28/2025 16:32:42'!
+isAvailable
+	^ true! !
+
+!RoomAvailable methodsFor: 'assertion' stamp: 't 4/28/2025 16:51:30'!
+isOccupied
+	^ false! !
+
+!RoomAvailable methodsFor: 'assertion' stamp: 't 4/28/2025 16:52:15'!
+isReserved
+	^ false! !
 
 
 !classDefinition: #RoomOccupied category: #'ISW1-2024-1C-Parcial'!
@@ -1434,36 +1306,36 @@ RoomState subclass: #RoomOccupied
 	poolDictionaries: ''
 	category: 'ISW1-2024-1C-Parcial'!
 
-!RoomOccupied methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 17:19:45'!
+!RoomOccupied methodsFor: 'assertion' stamp: 't 4/28/2025 16:43:28'!
+isAvailable
+	^ false! !
+
+!RoomOccupied methodsFor: 'assertion' stamp: 't 4/28/2025 16:51:36'!
+isOccupied
+	^ true! !
+
+!RoomOccupied methodsFor: 'assertion' stamp: 't 4/28/2025 16:52:23'!
+isReserved
+	^ false! !
+
+
+!RoomOccupied methodsFor: 'guest' stamp: 't 4/28/2025 17:19:45'!
 canI: aRoom receive: aGuestType 
 	
 	aRoom youCannotReceive ! !
 
-!RoomOccupied methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 18:33:21'!
+!RoomOccupied methodsFor: 'guest' stamp: 't 4/28/2025 18:33:21'!
 canIReserveTheRoom: aRoom 
 	self error: Room roomIsNotEmptyErrorDescription! !
 
-!RoomOccupied methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:43:28'!
-isAvailable
-	^ false! !
-
-!RoomOccupied methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:51:36'!
-isOccupied
-	^ true! !
-
-!RoomOccupied methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:52:23'!
-isReserved
-	^ false! !
-
-!RoomOccupied methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 18:22:11'!
-receiveGuestWithReservation: aGuestType inRoom: aRoom 
-	self error: Room roomIsNotReservedErrorDescription! !
-
-
-!RoomOccupied methodsFor: 'initialization' stamp: 't 4/28/2025 18:04:13'!
+!RoomOccupied methodsFor: 'guest' stamp: 't 4/28/2025 18:04:13'!
 profitUsing: aPriceList withGuest: aGuest ifAbsent: unknownGuestTypeBlock 
 	 
 	^ aPriceList at: aGuest ifAbsent: unknownGuestTypeBlock ! !
+
+!RoomOccupied methodsFor: 'guest' stamp: 't 4/28/2025 18:22:11'!
+receiveGuestWithReservation: aGuestType inRoom: aRoom 
+	self error: Room roomIsNotReservedErrorDescription! !
 
 
 !classDefinition: #RoomReserved category: #'ISW1-2024-1C-Parcial'!
@@ -1473,36 +1345,37 @@ RoomState subclass: #RoomReserved
 	poolDictionaries: ''
 	category: 'ISW1-2024-1C-Parcial'!
 
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 17:19:58'!
+!RoomReserved methodsFor: 'guest' stamp: 't 4/28/2025 17:19:58'!
 canI: aRoom receive: aGuestType 
 	
 	aRoom youCannotReceive ! !
 
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 18:32:52'!
+!RoomReserved methodsFor: 'guest' stamp: 't 4/28/2025 18:32:52'!
 canIReserveTheRoom: aRoom 
 	self error: Room roomIsNotEmptyErrorDescription! !
 
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:43:37'!
-isAvailable
-	^ false! !
-
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:51:45'!
-isOccupied
-	^ true! !
-
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 16:52:32'!
-isReserved
-	^true! !
-
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 18:06:34'!
+!RoomReserved methodsFor: 'guest' stamp: 't 4/28/2025 18:06:34'!
 profitUsing: aPriceList withGuest: aGuest ifAbsent: unknownGuestTypeBlock 
 
 	^ aPriceList values min / 2 
 	! !
 
-!RoomReserved methodsFor: 'as yet unclassified' stamp: 't 4/28/2025 17:32:24'!
+!RoomReserved methodsFor: 'guest' stamp: 't 4/28/2025 17:32:24'!
 receiveGuestWithReservation: aGuestType inRoom: aRoom 
 
 	aRoom youCanReceive: aGuestType 
 	
 	! !
+
+
+!RoomReserved methodsFor: 'assertion' stamp: 't 4/28/2025 16:43:37'!
+isAvailable
+	^ false! !
+
+!RoomReserved methodsFor: 'assertion' stamp: 't 4/28/2025 16:51:45'!
+isOccupied
+	^ true! !
+
+!RoomReserved methodsFor: 'assertion' stamp: 't 4/28/2025 16:52:32'!
+isReserved
+	^true! !
