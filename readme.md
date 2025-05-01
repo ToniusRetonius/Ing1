@@ -98,8 +98,12 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 # Práctica Primer Parcial
 
+- 2C2022 : Fórmula 1 (seguí el video de Hernán del repo con las soluciones para aprender su método de resolución (recomiendo mirarlos))
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-2C-Parcial-1-Enunciado-1.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1(solve).st)
+
 - 2C2024 : Monstruos y Aventureros 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
-[ parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1(solve).st)
-
