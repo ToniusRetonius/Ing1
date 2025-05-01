@@ -2,36 +2,43 @@
 Cursada 1c 2025 de Ingeniería de Software I
 
 # Resúmenes
-- Teórica 1 :[Historia SmallTalk](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T1.pdf)
-- Teórica 2: [Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
+- Teórica 1 :[ Historia SmallTalk](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T1.pdf)
+- Teórica 2: [ Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
 
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
 ## Parte 1 - Introducción a SmallTalk
 No están los .st (SmallTalk Source Code File)
-- Intro al paradigma, el lenguaje y sus herramientas[Parte a](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/01-Parte-A/solve.pdf)
+- Intro al paradigma, el lenguaje y sus herramientas[ Parte a](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/01-Parte-A/solve.pdf)
 - Intro al paradigma, el lenguaje y sus herramientas [Parte b](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/02-Parte-B/solve.pdf)
 
 ## Parte 2 - Repeated Code y Double Dispatch
 Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo en determinado momento. 
 - Código repetido
-[solución propia](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve) 
+[Solución Propia](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve) 
 [Breve Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
 
 
-- [Replace If](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs)
+- Replace If[ Enunciados](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs)
 
-    - [01 - Type](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/01-Replace-If-Type/1.Replace-if-Type(solve).st)
+    - 01 - Type
+    [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/01-Replace-If-Type/1.Replace-if-Type(solve).st)
+    [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/1.Replace-if-Type-Solucion.st)
 
-    - [02 - State](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/02-Replace-If-State/2.Replace-if-State(solve).st)
-        - [Breve Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/solve.pdf)
+    - 02 - State[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/02-Replace-If-State/2.Replace-if-State(solve).st)
+    [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/2.Replace-if-State-Solucion.st)
+    [Breve Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/solve.pdf)
 
-    - [03 - Type + State](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/03-Replace-If-Type%2BState/3.Replace-if-Type%2BState(solve).st)
+    - 03 - Type + State 
+    [ Solución Propia ](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/03-Replace-If-Type%2BState/3.Replace-if-Type%2BState(solve).st)
+    [ Solución Cátedra ](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/3.Replace-if-Type%2BState-Solucion.st)
 
-    - [04 - Strategy](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/04-Replace-If-Strat/4.Replace-if-Strategy(solve).st)
+    - 04 - Strategy 
+    [Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/04-Replace-If-Strat/4.Replace-if-Strategy(solve).st)
+    [Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/4.Replace-if-Strategy-Solucion.st)
 
-- [Números (opcional)](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional))
+- Números (opcional) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional))
     - [Pre-Números](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Exercise(solve).st)
     - [Número](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
 
