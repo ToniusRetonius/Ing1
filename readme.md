@@ -95,3 +95,9 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/Smalltalk%20best%20practice%20patterns-%20method%20object.pdf)
 [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/resumen.md)
 
+
+# Práctica Primer Parcial
+
+- 2C2024 : Monstruos y Aventureros 
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
+[ parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
