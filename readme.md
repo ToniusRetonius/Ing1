@@ -103,6 +103,16 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1(solve).st)
 
+- 2C2022 : Piratas
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-Parcial-1-Enunciado.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial.st)
+
+
+- 1C2024 : Sims Hotels 
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-1erParcial-Practica.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-Parcial.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-Parcial(solve).st)
+
 - 2C2024 : Monstruos y Aventureros 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
