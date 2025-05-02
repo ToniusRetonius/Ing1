@@ -4,6 +4,7 @@ Cursada 1c 2025 de Ingeniería de Software I
 # Resúmenes
 - Teórica 1 :[ Historia SmallTalk](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T1.pdf)
 - Teórica 2: [ Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
+- Papers para el primer parcial [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen%20papers%20primer%20parcial.pdf)
 
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
@@ -98,6 +99,11 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 # Práctica Primer Parcial
 
+- 2C2021 : Sims City (los tests se pueden mejorar un poco más)
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-Parcial-1-Enunciado.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial(solve).st)
+
 - 1C2022 : Fórmula 1 (seguí el video de Hernán del repo con las soluciones para aprender su método de resolución (recomiendo mirarlos))
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-2C-Parcial-1-Enunciado-1.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1.st)
@@ -108,11 +114,10 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial(solve).st)
 
-
-- 2C2021 : Sims City (los tests se pueden mejorar un poco más)
-[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-Parcial-1-Enunciado.pdf)
-[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial(solve).st)
+- 1C2023 : Perforaciones
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-1erParcial-ISW1-Perforaciones.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1(solve).st)
 
 - 1C2024 : Sims Hotels 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-1erParcial-Practica.pdf)
@@ -123,8 +128,3 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1(solve).st)
-
-- 1C2023 : Perforaciones
-[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-1erParcial-ISW1-Perforaciones.pdf)
-[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1(solve).st)
