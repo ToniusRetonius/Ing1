@@ -45,24 +45,21 @@ test03MovingCrewToFreePlace
 				self assert: (island hasCrewAt: nextPosition).
 			].! !
 
-!CrewTest methodsFor: 'tests' stamp: 't 5/1/2025 23:54:27'!
+!CrewTest methodsFor: 'tests' stamp: 't 5/2/2025 00:35:48'!
 test04MovingCrewToFreePlaceCorsarioWritesDirectionInMap
 
-	| crew setup nextPosition map |
-			
-	setup := self setupIslandWithDigPositionAt: 3@3.
-	map := setup second.
-	crew := setup third.
-
 	
-	nextPosition := 2@1.
-	self assert: map isEmpty.
+	self assertMovingCrewToFreePlaceCorsarioWritesDirectionInMapAtDigPosition: 3@3 
+	does:[:map :crew |
+		|nextPosition|
+		nextPosition := 2@1.
+		self assert: map isEmpty.
 
-	crew moveTo: nextPosition.
+		crew moveTo: nextPosition.
 
-	self assert: map stepsSize equals: 1. 
-	self assert: map lastPosition equals: nextPosition.
-! !
+		self assert: map stepsSize equals: 1. 
+		self assert: map lastPosition equals: nextPosition.
+	]! !
 
 !CrewTest methodsFor: 'tests' stamp: 't 5/2/2025 00:18:09'!
 test05CrewCannotBuryTreasureIfBucaneroCannotDig
@@ -157,6 +154,16 @@ assertDifferentRankPirateUseMapAtDigPosition: digPosition does: aBlock
 	setup := self setupIslandWithDigPositionAt: digPosition .
 	aBlock value: setup third value: setup first value: setup second.! !
 
+!CrewTest methodsFor: 'assertions' stamp: 't 5/2/2025 00:37:42'!
+assertMovingCrewToFreePlaceCorsarioWritesDirectionInMapAtDigPosition: digPosition does: aBlock
+	
+	| setup |
+	setup := self setupIslandWithDigPositionAt: digPosition .
+	
+	aBlock value: setup second value: setup third
+	
+	! !
+
 !CrewTest methodsFor: 'assertions' stamp: 't 5/2/2025 00:14:30'!
 assertMovingCrewToTreePlaceWithDigPosition: digPosition Does: aBlock 
 	| setup |
@@ -164,12 +171,11 @@ assertMovingCrewToTreePlaceWithDigPosition: digPosition Does: aBlock
 	setup := self setupIslandWithDigPositionAt: digPosition .
 	aBlock value: setup third value: setup fifth value: setup first value: setup fourth ! !
 
-!CrewTest methodsFor: 'assertions' stamp: 't 5/2/2025 00:19:48'!
+!CrewTest methodsFor: 'assertions' stamp: 't 5/2/2025 00:32:24'!
 assertTreasureDigPositionAt: digPosition does: aBlock
 	
 	| setup |
 	setup := self setupIslandWithDigPositionAt: digPosition .
-	"{island. map. crew. crewPosition. treePosition }"
 	aBlock value: setup third value: setup second
 	
 	
