@@ -103,7 +103,7 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1(solve).st)
 
-- 2C2022 : Piratas (usé algo que no vimos en las clases para sacar código repetido en los tests, pero está interesante, consultar si vale)
+- 2C2022 : Piratas (usé algo que no vimos en las clases para sacar código repetido en los tests, básicamente es devolver un literal de arreglo en un mensaje y después tomarle *first, second,...* para poder manipular los datos de forma desordenada luego )
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-Parcial-1-Enunciado.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial(solve).st)
