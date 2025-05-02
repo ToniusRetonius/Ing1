@@ -123,3 +123,8 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1(solve).st)
+
+- 1C2023 : Perforaciones
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-1erParcial-ISW1-Perforaciones.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1(solve).st)
