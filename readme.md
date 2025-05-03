@@ -119,6 +119,11 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1(solve).st)
 
+- 2C2023 : Penales
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2023/ISW1-2023-2C-1erParcial-ISW1-Penales.pdf)
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2023/ISW1-2023-2C-Parcial-1.st)
+[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2023/ISW1-2023-2C-Parcial-1(solve).st)
+
 - 1C2024 : Sims Hotels 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-1erParcial-Practica.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-Parcial.st)
