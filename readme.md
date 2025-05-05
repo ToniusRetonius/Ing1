@@ -133,3 +133,4 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1(solve).st)
+[ Respuestas Parte Teórica](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/Respuestas%20parte%20te%C3%B3rica.pdf)
