@@ -96,6 +96,11 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/Smalltalk%20best%20practice%20patterns-%20method%20object.pdf)
 [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/12/resumen.md)
 
+- 13 : Modern Software Engineering (capítulos 1 - 2 - 3) 
+[ Recorte del libro](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/13/Modern%20Software%20Engineering%20cap1-2-3.pdf) 
+[ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/13/resumen.md)
+[ Libro](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Modern%20Software%20Engineering.pdf)
+
 
 # Práctica Primer Parcial
 
