@@ -9,12 +9,12 @@ Cursada 1c 2025 de Ingeniería de Software I
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
-## Parte 1 - Introducción a SmallTalk
+## Parte 1 : Introducción a SmallTalk
 No están los .st (SmallTalk Source Code File)
 - Intro al paradigma, el lenguaje y sus herramientas[ Parte a](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/01-Parte-A/solve.pdf)
 - Intro al paradigma, el lenguaje y sus herramientas [Parte b](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%201/02-Parte-B/solve.pdf)
 
-## Parte 2 - Repeated Code - Double Dispatch - State / Strategy / Method Object Pattern
+## Parte 2 : Repeated Code - Double Dispatch - State / Strategy / Method Object Pattern
 Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo en determinado momento. 
 - Código repetido
 [Solución Propia](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve) 
@@ -51,7 +51,8 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Solución Cátedra State](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Solution-1.st)
 [ Solución Cátedra OOStackTop](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Solution-2.st)
 
-    
+## Parte 3 : TDD (Test Driven Development)
+- Mars Rover : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/Enunciado.pdf) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover(solve).st)
 
 # Papers con Resumen
 - 1 : Programming as Theory Building (Naur)
@@ -139,3 +140,4 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
 [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1(solve).st)
 [ Respuestas Parte Teórica](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/Respuestas%20parte%20te%C3%B3rica.pdf)
+
