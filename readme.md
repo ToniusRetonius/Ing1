@@ -52,7 +52,11 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Solución Cátedra OOStackTop](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Solution-2.st)
 
 ## Parte 3 : TDD (Test Driven Development)
-- Mars Rover : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/Enunciado.pdf) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover(solve).st)
+- Mars Rover : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/Enunciado.pdf) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover(solve).st) [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover-Solucion-WithHeading.st)
+
+- Portfolio 1 : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Consigna.txt) [ Checkpoint 1](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/checkpoint-1.st) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/checkpoint-2.st) [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Portfolio-Solucion.st)
+
+- Portfolio 2 : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/enunciado.pdf) [ Checkpoint 1](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/transfer-checkpoint.st)
 
 # Papers con Resumen
 - 1 : Programming as Theory Building (Naur)
