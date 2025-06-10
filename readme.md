@@ -148,10 +148,10 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 # Design Patterns
 El libro de Design Patterns de Erich Gamma está [acá](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Libros/Design%20Patterns%20-%20Erich%20Gamma.pdf), pero la idea es ir leyendo y resumiendo los patrones que vemos en las clases. Por tanto, recorté cada uno de ellos.
 
-- [Adapter Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Adapter.pdf)
+- [Adapter Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Adapter.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Adapter_Pattern.pdf)
 
-- [Composite Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Composite.pdf)
+- [Composite Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Composite.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Composite_Pattern.pdf)
 
-- [Decorator Patter](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Decorator.pdf)
+- [Decorator Patter](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Decorator.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Decorator_Pattern.pdf)
 
-- [Proxy Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Proxy.pdf)
+- [Proxy Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Proxy.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Proxy_Pattern.pdf)
