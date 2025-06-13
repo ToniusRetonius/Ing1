@@ -56,7 +56,7 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 - Portfolio 1 : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Consigna.txt) [ Checkpoint 1](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/checkpoint-1.st) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/checkpoint-2.st) [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Portfolio-Solucion.st)
 
-- Portfolio 2 : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/enunciado.pdf) [ Checkpoint 1](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/transfer-checkpoint.st)
+- Portfolio 2 (en mi solución faltó sacar unos ifs y reificar para que AccountSummary haga de 'Visitor'): [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/enunciado.pdf) [ Parte I : Transferencias](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/portfolio2-transferencias) [ Parte II : ReportesI](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/portfolio2-reportesI)
 
 # Papers con Resumen
 - 1 : Programming as Theory Building (Naur)
