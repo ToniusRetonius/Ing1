@@ -334,42 +334,56 @@ TestCase subclass: #TransferTest
 	poolDictionaries: ''
 	category: 'Portfolio-Ejercicio'!
 
-!TransferTest methodsFor: 'tests' stamp: 'tom 6/6/2025 17:57:26'!
-test01ExtractAndSendFromOneAccountToAnother
+!TransferTest methodsFor: 'tests' stamp: 'tom 6/13/2025 13:57:19'!
+test01ExtractionLegAffectsBalance
 	
 	| account account2 |
 	account := ReceptiveAccount new.
-	Deposit register: 100 on: account.
-	
 	account2 := ReceptiveAccount new.
+	Deposit register: 100 on: account .
+	Transfer from: account to: account2 theAmount: 50. 
 	
-	Transfer from: account to: account2 theAmount: 50.
-	
-	self assert: (account2 balance) equals: 50.! !
+	self assert: account balance equals: 50! !
 
-!TransferTest methodsFor: 'tests' stamp: 'tom 6/6/2025 18:07:08'!
-test02TransferIsRegistered
+!TransferTest methodsFor: 'tests' stamp: 'tom 6/13/2025 13:57:24'!
+test02DepositLegAffectsBalance
 	
 	| account account2 |
 	account := ReceptiveAccount new.
-	Deposit register: 100 on: account.
-	
 	account2 := ReceptiveAccount new.
+	Deposit register: 100 on: account .
+	Transfer from: account to: account2 theAmount: 50. 
 	
-	self assert: (account2 hasRegistered:(Transfer from: account to: account2 theAmount: 50))! !
+	self assert: account2 balance equals: 50! !
 
-!TransferTest methodsFor: 'tests' stamp: 'tom 6/6/2025 18:16:30'!
-test03TransferDoesNotAffectBalance
+!TransferTest methodsFor: 'tests' stamp: 'tom 6/13/2025 14:02:25'!
+test03CanNavigateFromDepositLegToExtractionLeg
 	
-	| account account2 |
+	| account account2 transfer |
 	account := ReceptiveAccount new.
+	Deposit register: 100 on: account.
+	 
 	account2 := ReceptiveAccount new.
 	
-	Deposit register: 100 on: account.
-	Transfer from: account to: account2 theAmount: 50.
+	transfer := Transfer from: account to: account2 theAmount: 50.
 	
-	self assert: (account2 balance) equals: 50.
-	 ! !
+	self assert: (transfer extractionLeg) otherLeg equals: (transfer depositLeg ) .
+	
+	! !
+
+!TransferTest methodsFor: 'tests' stamp: 'tom 6/13/2025 14:03:04'!
+test04CanNavigateFromExtractionLegToDepositLeg
+	
+	| account account2 transfer |
+	account := ReceptiveAccount new.
+	Deposit register: 100 on: account.
+	 
+	account2 := ReceptiveAccount new.
+	
+	transfer := Transfer from: account to: account2 theAmount: 50.
+	
+	self assert: (transfer depositLeg ) otherLeg equals: (transfer extractionLeg) .
+	! !
 
 
 !classDefinition: #AccountTransaction category: #'Portfolio-Ejercicio'!
@@ -435,69 +449,89 @@ for: aValue
 	^ self new initializeFor: aValue ! !
 
 
-!classDefinition: #Transfer category: #'Portfolio-Ejercicio'!
-AccountTransaction subclass: #Transfer
-	instanceVariableNames: 'sender receiver amount'
+!classDefinition: #TransferLeg category: #'Portfolio-Ejercicio'!
+AccountTransaction subclass: #TransferLeg
+	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Portfolio-Ejercicio'!
 
-!Transfer methodsFor: 'transaction' stamp: 'tom 6/6/2025 17:44:55'!
-assertSenderBalance
-	
-	(sender CanSend: amount) ifFalse:[self error: self class senderHasNotEnoughMoneyToCompleteTransaction].! !
+
+!classDefinition: #DepositLeg category: #'Portfolio-Ejercicio'!
+TransferLeg subclass: #DepositLeg
+	instanceVariableNames: 'receiverAccount transfer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
 
-!Transfer methodsFor: 'transaction' stamp: 'tom 6/6/2025 17:38:24'!
-assertTransactionIsPossible
+!DepositLeg methodsFor: 'initialization' stamp: 'tom 6/10/2025 16:23:19'!
+initializeOn: aReceiverAccount inTransfer: aTransfer 
 	
-	self assertSenderBalance.! !
-
-!Transfer methodsFor: 'transaction' stamp: 'tom 6/6/2025 18:09:46'!
-extractMoneyFromSender
+	transfer := aTransfer.
 	
-	sender assertExtractionAmount: amount inTransfer: self ! !
-
-!Transfer methodsFor: 'transaction' stamp: 'tom 6/6/2025 17:52:33'!
-initializeTransferFrom: senderAccount to: receiverAccount theAmount: anAmountOfMoney 
-	
-	sender := senderAccount.
-	receiver := receiverAccount.
-	amount := anAmountOfMoney.
-	
-	self assertTransactionIsPossible.
-	
-	self extractMoneyFromSender.
-	
-	self sendMoneyToReceiver.
-	
-	! !
-
-!Transfer methodsFor: 'transaction' stamp: 'tom 6/6/2025 18:12:30'!
-sendMoneyToReceiver
-	
-	receiver youReceived: amount inTransfer: self ! !
+	aReceiverAccount register: self.! !
 
 
-!Transfer methodsFor: 'value' stamp: 'tom 6/6/2025 18:18:01'!
+!DepositLeg methodsFor: 'balance' stamp: 'tom 6/10/2025 16:28:07'!
 sumUntilNow: suma 
-	^suma! !
+	^ suma + (transfer amount )! !
+
+
+!DepositLeg methodsFor: 'transfer' stamp: 'tom 6/13/2025 14:03:24'!
+otherLeg
+	^transfer extractionLeg ! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'Transfer class' category: #'Portfolio-Ejercicio'!
-Transfer class
+!classDefinition: 'DepositLeg class' category: #'Portfolio-Ejercicio'!
+DepositLeg class
 	instanceVariableNames: ''!
 
-!Transfer class methodsFor: 'instance creation' stamp: 'tom 6/6/2025 17:35:51'!
-from: senderAccount to: receiverAccount theAmount: anAmountOfMoney 
+!DepositLeg class methodsFor: 'instance creation' stamp: 'tom 6/10/2025 16:22:54'!
+on: aReceiverAccount inTransfer: aTransfer 
 
-	^self new initializeTransferFrom: senderAccount to: receiverAccount theAmount: anAmountOfMoney ! !
+	^self new initializeOn: aReceiverAccount inTransfer: aTransfer ! !
 
+
+!classDefinition: #ExtractionLeg category: #'Portfolio-Ejercicio'!
+TransferLeg subclass: #ExtractionLeg
+	instanceVariableNames: 'extractionAccount transfer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
 
-!Transfer class methodsFor: 'error message' stamp: 'tom 6/6/2025 17:50:54'!
-senderHasNotEnoughMoneyToCompleteTransaction
+!ExtractionLeg methodsFor: 'initialization' stamp: 'tom 6/10/2025 16:22:29'!
+initializeOn: anExtractionAccount inTransfer: aTransfer 
+
+	transfer := aTransfer.
 	
-	^ 'The Sender account has no money to complete the transfer'! !
+	anExtractionAccount register: self.! !
+
+
+!ExtractionLeg methodsFor: 'balance' stamp: 'tom 6/10/2025 16:27:16'!
+sumUntilNow: suma 
+	^suma  - (transfer amount)! !
+
+
+!ExtractionLeg methodsFor: 'transfer' stamp: 'tom 6/13/2025 14:01:23'!
+otherLeg
+	^transfer depositLeg! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'ExtractionLeg class' category: #'Portfolio-Ejercicio'!
+ExtractionLeg class
+	instanceVariableNames: ''!
+
+!ExtractionLeg class methodsFor: 'instance creation' stamp: 'tom 6/10/2025 16:21:53'!
+on: anExtractionAccount inTransfer: aTransfer 
+	
+	^self new initializeOn: anExtractionAccount inTransfer: aTransfer ! !
+
+
+!ExtractionLeg class methodsFor: 'as yet unclassified' stamp: 'tom 6/10/2025 16:21:04'!
+on: anExtractionAccount 
+	self shouldBeImplemented.! !
 
 
 !classDefinition: #Withdraw category: #'Portfolio-Ejercicio'!
@@ -663,12 +697,6 @@ CanSend: anAmount inTransaction: aTransfer
 	
 	^ anAmount > (self balance) ! !
 
-!ReceptiveAccount methodsFor: 'transactions' stamp: 'tom 6/6/2025 18:10:59'!
-assertExtractionAmount: anAmountOfMoney inTransfer: aTransfer  
-	
-	Withdraw register: anAmountOfMoney on: self.
-	self register: aTransfer . ! !
-
 !ReceptiveAccount methodsFor: 'transactions' stamp: 'HernanWilkinson 7/13/2011 18:37'!
 register: aTransaction
 
@@ -679,12 +707,6 @@ register: aTransaction
 transactions 
 
 	^ transactions copy! !
-
-!ReceptiveAccount methodsFor: 'transactions' stamp: 'tom 6/6/2025 18:12:57'!
-youReceived: anAmountOfMoneyReceived inTransfer: aTransfer  
-	
-	Deposit register: anAmountOfMoneyReceived on: self.
-	self register: aTransfer ! !
 
 
 !ReceptiveAccount methodsFor: 'balance' stamp: 'tom 5/27/2025 21:56:42'!
@@ -711,3 +733,44 @@ hasRegistered: aTransaction
 
 	^ transactions includes: aTransaction 
 ! !
+
+
+!classDefinition: #Transfer category: #'Portfolio-Ejercicio'!
+Object subclass: #Transfer
+	instanceVariableNames: 'amount extractionLeg depositLeg'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+
+!Transfer methodsFor: 'as yet unclassified' stamp: 'tom 6/13/2025 13:56:39'!
+amount
+	^amount ! !
+
+!Transfer methodsFor: 'as yet unclassified' stamp: 'tom 6/13/2025 14:01:39'!
+depositLeg
+	^depositLeg! !
+
+!Transfer methodsFor: 'as yet unclassified' stamp: 'tom 6/13/2025 14:00:36'!
+extractionLeg
+	^extractionLeg ! !
+
+!Transfer methodsFor: 'as yet unclassified' stamp: 'tom 6/13/2025 13:56:22'!
+initializeTransferFrom: anExtractionAccount to: aReceiverAccount theAmount: anAmount 
+	
+	"solo la conoce transfer"
+	amount := anAmount.
+	
+	"la transferencia conoce sus patas"
+	extractionLeg := ExtractionLeg on: anExtractionAccount inTransfer: self.
+	depositLeg := DepositLeg on: aReceiverAccount inTransfer: self.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Transfer class' category: #'Portfolio-Ejercicio'!
+Transfer class
+	instanceVariableNames: ''!
+
+!Transfer class methodsFor: 'as yet unclassified' stamp: 'tom 6/13/2025 13:56:51'!
+from: extractionAccount to: receiverAccount theAmount: anAmount 
+
+	^self new initializeTransferFrom: extractionAccount to: receiverAccount theAmount: anAmount ! !
