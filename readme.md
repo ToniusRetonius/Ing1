@@ -106,6 +106,8 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/13/resumen.md)
 [ Libro](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Modern%20Software%20Engineering.pdf)
 
+- 15 : Pattern Abuser [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/pattern-abuser.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/resumen.pdf)
+
 
 # Práctica Primer Parcial
 
