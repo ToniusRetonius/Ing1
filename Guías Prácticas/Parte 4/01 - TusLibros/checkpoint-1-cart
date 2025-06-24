@@ -1,0 +1,148 @@
+!classDefinition: #CartTest category: #TusLibrosDotCom!
+TestCase subclass: #CartTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 17:35:02'!
+test01WhenCartIsCreatedIsEmpty
+	
+	self assert: (Cart new) isEmpty ! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 17:51:26'!
+test02WhenAddingABookToTheCartTheBookQuantityIsPositive
+	
+	| cart |
+	cart := Cart new.
+	self should: [cart add: #Libro withQuantity: 0.] raise: Error  withMessageText: 'The amount of book added must be positive!!'! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 17:55:23'!
+test03WhenAddingABookToTheCartTheBookThatIsFromTheEditorialShouldntFail
+	
+	| cart catalogue |
+	catalogue := OrderedCollection new.
+	catalogue add:#Libro.
+	
+	cart := Cart on:catalogue.
+	
+	self deny: (cart add: #Libro withQuantity: 1) isEmpty ! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 17:55:35'!
+test04WhenAddingABookToTheCartTheBookThatIsNotFromTheEditorialShouldFail
+	
+	| cart catalogue |
+	catalogue := OrderedCollection new.
+	
+	cart := Cart on:catalogue.
+	
+	self should: [cart add:#Libro  withQuantity:3 .] raise: Error withMessageText:[Cart BookNotFromEditorialError]. ! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 17:59:13'!
+test05WhenAddingABookToTheCartTheBookThatIsFromTheEditorialThatIsAlreadyInCartAddsQuantity
+	
+	| cart catalogue |
+	catalogue := OrderedCollection new.
+	catalogue add:#Libro.
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 10; add: #Libro withQuantity: 10.
+	
+	self assert: (cart quantityOfBookInCart: #Libro) equals: 20.! !
+
+
+!classDefinition: #Cart category: #TusLibrosDotCom!
+Object subclass: #Cart
+	instanceVariableNames: 'books catalogue'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!Cart methodsFor: 'initialization' stamp: 'tom 6/10/2025 21:34:23'!
+initialize
+	
+	books := OrderedCollection new.! !
+
+!Cart methodsFor: 'initialization' stamp: 'tom 6/13/2025 17:51:53'!
+initializeOn: aCatalogue 
+	books := Dictionary new.
+	catalogue := aCatalogue.! !
+
+
+!Cart methodsFor: 'accessing' stamp: 'tom 6/10/2025 21:35:23'!
+isEmpty
+	^books isEmpty ! !
+
+!Cart methodsFor: 'accessing' stamp: 'tom 6/13/2025 18:03:28'!
+quantityOfBookInCart: aBook 
+	
+	self assertBookInBooks: aBook .
+	
+	^books at:aBook .! !
+
+
+!Cart methodsFor: 'adding book' stamp: 'tom 6/13/2025 18:14:12'!
+add: aBook withQuantity: aQuantity 
+	
+	
+	self assertQuantityIsPositive: aQuantity.
+	self assertBookIsFromEditorial: aBook .
+	
+	books at: aBook put: ((self assertBookQuantityInCart:aBook ) + aQuantity) .
+	! !
+
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 18:10:57'!
+assertBookInBooks: aBook 
+	
+	((books at:aBook ifAbsent: 0) > 0) ifFalse: [self error: self class bookNotInCartMessageError].
+	
+! !
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/10/2025 21:52:44'!
+assertBookIsFromEditorial: aBook 
+	
+	(catalogue includes: aBook) ifFalse: [self error: self class BookNotFromEditorialError]! !
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 18:11:48'!
+assertBookQuantityInCart: aBook 
+	
+	^ books at:aBook ifAbsent:0.! !
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 17:47:49'!
+assertQuantityIsPositive: aQuantity 
+	
+	(aQuantity > 0) ifFalse: [self error: self class quantityAddedIsNotPositiveMessageError]! !
+
+
+!Cart methodsFor: 'as yet unclassified' stamp: 'tom 6/13/2025 17:58:33'!
+booksInCart
+	self shouldBeImplemented.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Cart class' category: #TusLibrosDotCom!
+Cart class
+	instanceVariableNames: ''!
+
+!Cart class methodsFor: 'instance creation' stamp: 'tom 6/13/2025 17:40:41'!
+new
+	
+	^ self basicNew initializeOn: OrderedCollection new.! !
+
+!Cart class methodsFor: 'instance creation' stamp: 'tom 6/13/2025 17:40:48'!
+on: catalogue 
+
+	^self basicNew initializeOn: catalogue ! !
+
+
+!Cart class methodsFor: 'error message' stamp: 'tom 6/10/2025 21:55:57'!
+BookNotFromEditorialError
+	^'El libro no está en la editorial'! !
+
+!Cart class methodsFor: 'error message' stamp: 'tom 6/13/2025 18:01:57'!
+bookNotInCartMessageError
+	^'The book asked is not in cart'! !
+
+!Cart class methodsFor: 'error message' stamp: 'tom 6/13/2025 17:48:15'!
+quantityAddedIsNotPositiveMessageError
+	^'The amount of book added must be positive!!'! !

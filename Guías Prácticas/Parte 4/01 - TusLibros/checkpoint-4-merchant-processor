@@ -1,0 +1,477 @@
+!classDefinition: #CartTest category: #TusLibrosDotCom!
+TestCase subclass: #CartTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 20:02:57'!
+test01WhenCartIsCreatedIsEmpty
+	
+	| catalogue |
+	catalogue := Catalogue with: Dictionary new.
+	self assert: (Cart on: catalogue ) isEmpty ! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 20:03:07'!
+test02WhenAddingABookToTheCartTheBookQuantityMustBePositive
+	
+	| cart catalogue |
+	catalogue := Catalogue with: Dictionary new.
+	cart := Cart on: catalogue.
+	self should: [cart add: #Libro withQuantity: 0.] raise: Error  withMessageText: 'The amount of book added must be positive!!'! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 20:03:25'!
+test03WhenAddingABookToTheCartTheBookThatIsFromTheEditorialShouldntFail
+	
+	| cart catalogue books |
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	catalogue := Catalogue with: books .
+	
+	cart := Cart on:catalogue.
+	
+	self deny: (cart add: #Libro withQuantity: 1) isEmpty ! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 20:04:35'!
+test04WhenAddingABookToTheCartTheBookThatIsNotFromTheEditorialShouldFail
+	
+	| cart catalogue |
+	catalogue := Catalogue with: Dictionary new.
+	
+	cart := Cart on:catalogue.
+	
+	self should: [cart add:#Libro  withQuantity:3 .] raise: Error withMessageText:[Cart bookNotFromEditorialError]. ! !
+
+!CartTest methodsFor: 'tests' stamp: 'tom 6/13/2025 20:05:05'!
+test05WhenAddingABookToTheCartTheBookThatIsFromTheEditorialThatIsAlreadyInCartAddsQuantity
+	
+	| cart catalogue books |
+	books := Dictionary new.
+	books at:#Libro put: 100.
+	catalogue := Catalogue with: books .
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 10; add: #Libro withQuantity: 10.
+	
+	self assert: (cart quantityOfBookInCart: #Libro) equals: 20.! !
+
+
+!classDefinition: #CashierTest category: #TusLibrosDotCom!
+TestCase subclass: #CashierTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!CashierTest methodsFor: 'setup' stamp: 'tom 6/17/2025 19:55:45'!
+salesBook
+	^ SalesBook new! !
+
+!CashierTest methodsFor: 'setup' stamp: 'tom 6/17/2025 18:05:51'!
+validCard
+	 ^CreditCard dated: GregorianMonthOfYear current .! !
+
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:08:02'!
+test01CashierCheckoutsEmptyCartRaisesError
+	
+	| cart cashier books catalogue card salesBook |
+	card := self validCard .
+	salesBook := self salesBook.
+	books := Dictionary new.
+	catalogue := Catalogue with: books.
+	cart := Cart on:catalogue.
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	
+	self should: [cashier checkoutWithCard: card] raise:  Error withMessageText: 'Empty cart cannot be checked out!!'.! !
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:07:57'!
+test02CashierCheckoutsSingleBookCartReturnsItsValue
+	
+	| cart cashier books catalogue card salesBook |
+	card := self validCard .
+	salesBook := self salesBook.
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	catalogue := Catalogue with: books.
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 1.
+	 
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	
+	self assert: (cashier checkoutWithCard: card) equals: 100.
+	! !
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:07:51'!
+test03CashierCheckoutsManyBookCartReturnsItsTotal
+	
+	| cart cashier books catalogue card salesBook |
+	card := self validCard .
+	salesBook := self salesBook.
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	catalogue := Catalogue with: books.
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 10.
+	 
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	
+	self assert: (cashier checkoutWithCard: card) equals: 1000.
+	! !
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:07:46'!
+test04CashierCannotCheckoutCartWithExpiratedCard
+	
+	| creditCard cart cashier books catalogue salesBook |
+	creditCard := CreditCard dated: (GregorianMonthOfYear juneOf: (GregorianYear number: 2000)).
+	salesBook := self salesBook.
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	catalogue := Catalogue with: books.
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 1.
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	
+	self should: [cashier checkoutWithCard: creditCard ] raise: Error  withMessageText: 'The card is Expired'. ! !
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:07:41'!
+test05CashierRegistersSaleInSalesBook
+	| cart cashier books catalogue card salesBook |
+	
+	card := self validCard .
+	
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	
+	catalogue := Catalogue with: books.
+	
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 1.
+	
+	salesBook := SalesBook new.
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	cashier checkoutWithCard: card.
+	
+	self deny: salesBook isEmpty. 
+	! !
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:07:28'!
+test06CashierValidatesCardUsingMockMerchantProcessor
+	
+	"el merchant processor no va a ser objeto de nuestro dominio, por eso lo vamos a simular, por eso es Mock"
+	| cart cashier books catalogue card salesBook |
+	
+	card := self validCard .
+	
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	
+	catalogue := Catalogue with: books.
+	
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 1.
+	
+	salesBook := SalesBook new.
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	
+	self assert: (self assertCardCanPay: card theAmount: (cashier checkoutWithCard: card) ).! !
+
+!CashierTest methodsFor: 'tests' stamp: 'tom 6/17/2025 21:09:46'!
+test07CashierRejectsCheckoutWhenCardHasNoMoney
+	| cart cashier books catalogue card salesBook |
+	
+	card := self validCard .
+	
+	books := Dictionary new.
+	books at: #Libro put: 100.
+	
+	catalogue := Catalogue with: books.
+	
+	cart := Cart on:catalogue.
+	cart add: #Libro withQuantity: 10000000.
+	
+	salesBook := SalesBook new.
+	cashier := Cashier on: cart withSalesBook: salesBook withMerchantProcessor: self.
+	
+	self should:[cashier checkoutWithCard: card]  raise: Error  withMessageText: 'Payment error : card has not enough funds to pay' ! !
+
+
+!CashierTest methodsFor: 'merchant processor' stamp: 'tom 6/17/2025 21:05:14'!
+assertCardCanPay: aCreditCard theAmount: aCost 
+	(aCost > 100000) ifTrue: [self error: self paymentFailedErrorMessage] ifFalse: [^true].! !
+
+!CashierTest methodsFor: 'merchant processor' stamp: 'tom 6/17/2025 21:09:35'!
+paymentFailedErrorMessage
+	^'Payment error : card has not enough funds to pay'! !
+
+
+!classDefinition: #Cart category: #TusLibrosDotCom!
+Object subclass: #Cart
+	instanceVariableNames: 'books catalogue'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!Cart methodsFor: 'initialization' stamp: 'tom 6/13/2025 17:51:53'!
+initializeOn: aCatalogue 
+	books := Dictionary new.
+	catalogue := aCatalogue.! !
+
+
+!Cart methodsFor: 'accessing' stamp: 'tom 6/10/2025 21:35:23'!
+isEmpty
+	^books isEmpty ! !
+
+!Cart methodsFor: 'accessing' stamp: 'tom 6/13/2025 20:15:55'!
+items
+	^ (books keys) asOrderedCollection ! !
+
+!Cart methodsFor: 'accessing' stamp: 'tom 6/13/2025 18:03:28'!
+quantityOfBookInCart: aBook 
+	
+	self assertBookInBooks: aBook .
+	
+	^books at:aBook .! !
+
+
+!Cart methodsFor: 'adding book' stamp: 'tom 6/13/2025 18:14:12'!
+add: aBook withQuantity: aQuantity 
+	
+	
+	self assertQuantityIsPositive: aQuantity.
+	self assertBookIsFromEditorial: aBook .
+	
+	books at: aBook put: ((self assertBookQuantityInCart:aBook ) + aQuantity) .
+	! !
+
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 18:10:57'!
+assertBookInBooks: aBook 
+	
+	((books at:aBook ifAbsent: 0) > 0) ifFalse: [self error: self class bookNotInCartMessageError].
+	
+! !
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 19:30:59'!
+assertBookIsFromEditorial: aBook 
+	
+	"(catalogue includes: aBook) ifFalse: [self error: self class BookNotFromEditorialError]. -- luego de reificar con el catálogo como un objeto, esto cambia"
+	catalogue isBookInCatalogue: aBook ! !
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 18:11:48'!
+assertBookQuantityInCart: aBook 
+	
+	^ books at:aBook ifAbsent:0.! !
+
+!Cart methodsFor: 'assertion' stamp: 'tom 6/13/2025 17:47:49'!
+assertQuantityIsPositive: aQuantity 
+	
+	(aQuantity > 0) ifFalse: [self error: self class quantityAddedIsNotPositiveMessageError]! !
+
+
+!Cart methodsFor: 'checkout' stamp: 'tom 6/13/2025 20:59:17'!
+calculateCost
+	^(books keys) inject:0 into:[:sum :item | sum + ((catalogue calculatePriceOf: item) * (books at:item ))].! !
+
+
+!Cart methodsFor: 'sales book' stamp: 'tom 6/17/2025 20:13:37'!
+acceptVisitItems
+	
+	^ books ! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Cart class' category: #TusLibrosDotCom!
+Cart class
+	instanceVariableNames: ''!
+
+!Cart class methodsFor: 'instance creation' stamp: 'tom 6/13/2025 20:06:07'!
+on: catalogue 
+	^self new initializeOn: catalogue ! !
+
+
+!Cart class methodsFor: 'error message' stamp: 'tom 6/13/2025 19:32:25'!
+bookNotFromEditorialError
+	^'El libro no está en la editorial'! !
+
+!Cart class methodsFor: 'error message' stamp: 'tom 6/13/2025 18:01:57'!
+bookNotInCartMessageError
+	^'The book asked is not in cart'! !
+
+!Cart class methodsFor: 'error message' stamp: 'tom 6/13/2025 17:48:15'!
+quantityAddedIsNotPositiveMessageError
+	^'The amount of book added must be positive!!'! !
+
+
+!classDefinition: #Cashier category: #TusLibrosDotCom!
+Object subclass: #Cashier
+	instanceVariableNames: 'cart catalogue salesBook merchantProccessor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!Cashier methodsFor: 'initialization' stamp: 'tom 6/17/2025 19:53:57'!
+initializeOn: aCart withSalesBook: aSalesBook 
+	
+	cart := aCart.
+	salesBook := aSalesBook.! !
+
+!Cashier methodsFor: 'initialization' stamp: 'tom 6/17/2025 20:58:36'!
+initializeOn: aCart withSalesBook: aSalesBook withMerchantProcessor: aCashierTestThatMocksAMP 
+	
+	cart := aCart.
+	salesBook := aSalesBook.
+	merchantProccessor := aCashierTestThatMocksAMP.! !
+
+
+!Cashier methodsFor: 'checkout' stamp: 'tom 6/17/2025 21:01:00'!
+checkoutWithCard: creditCard 
+	
+	
+	| costo |
+	self assertCreditCardNotExpired: creditCard .
+	self assertCartNotEmpty .
+	
+	costo := cart calculateCost.
+	merchantProccessor assertCardCanPay: creditCard theAmount: costo.
+	self registerSaleOnCart.
+	
+	^costo .
+	
+	! !
+
+
+!Cashier methodsFor: 'assertion' stamp: 'tom 6/13/2025 20:08:42'!
+assertCartNotEmpty
+	(cart isEmpty) ifTrue: [self error: self class emptyCartMessageError].! !
+
+!Cashier methodsFor: 'assertion' stamp: 'tom 6/17/2025 18:39:27'!
+assertCreditCardNotExpired: creditCard 
+	creditCard isExpired! !
+
+
+!Cashier methodsFor: 'sale registration' stamp: 'tom 6/17/2025 20:12:50'!
+registerSaleOnCart
+	
+	"la visita le adiciona al diccionario en la clave libro,  la cantidad de libros vendidos"
+	salesBook visitsCartItems: (cart acceptVisitItems).
+! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Cashier class' category: #TusLibrosDotCom!
+Cashier class
+	instanceVariableNames: ''!
+
+!Cashier class methodsFor: 'instance creation' stamp: 'tom 6/17/2025 20:58:05'!
+on: aCart withSalesBook: aSalesBook withMerchantProcessor: aCashierTestThatMocksAMP 
+
+	^self new initializeOn: aCart withSalesBook: aSalesBook withMerchantProcessor: aCashierTestThatMocksAMP ! !
+
+
+!Cashier class methodsFor: 'error message' stamp: 'tom 6/13/2025 19:18:52'!
+emptyCartMessageError
+	^'Empty cart cannot be checked out!!'! !
+
+
+!classDefinition: #Catalogue category: #TusLibrosDotCom!
+Object subclass: #Catalogue
+	instanceVariableNames: 'catalogue'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!Catalogue methodsFor: 'initialization' stamp: 'tom 6/13/2025 20:02:47'!
+initializeWith: aDictionaryOfBooks 
+	
+	catalogue := aDictionaryOfBooks.! !
+
+
+!Catalogue methodsFor: 'assertion' stamp: 'tom 6/13/2025 20:04:24'!
+isBookInCatalogue: aBook 
+	catalogue at: aBook ifAbsent: [self error: self class bookNotFromEditorialError].! !
+
+
+!Catalogue methodsFor: 'checkout' stamp: 'tom 6/13/2025 20:17:12'!
+calculatePriceOf: item 
+	
+	^ catalogue at:item ! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Catalogue class' category: #TusLibrosDotCom!
+Catalogue class
+	instanceVariableNames: ''!
+
+!Catalogue class methodsFor: 'instance creation' stamp: 'tom 6/13/2025 19:25:43'!
+with: aCollectionOfBooks 
+	^self new initializeWith: aCollectionOfBooks ! !
+
+
+!Catalogue class methodsFor: 'error message' stamp: 'tom 6/13/2025 19:33:01'!
+bookNotFromEditorialError
+	^'El libro no está en la editorial'! !
+
+
+!classDefinition: #CreditCard category: #TusLibrosDotCom!
+Object subclass: #CreditCard
+	instanceVariableNames: 'issueDate expirationDate'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!CreditCard methodsFor: 'initialization' stamp: 'tom 6/17/2025 20:53:27'!
+initializeDated: aMonthAndYear 
+	
+	issueDate := aMonthAndYear .
+	expirationDate :=  GregorianMonthOfYear year: (((aMonthAndYear year) nextNumberOfYears: 2)) month: (aMonthAndYear month).
+	! !
+
+
+!CreditCard methodsFor: 'assertion' stamp: 'tom 6/17/2025 17:47:46'!
+isExpired
+	"si la fecha de expiración en menor, entonces está vencida"
+	| actual |
+	actual :=  (GregorianMonthOfYear current).
+	(actual < expirationDate) ifFalse: [self error: self class expiredCardMessageError].! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'CreditCard class' category: #TusLibrosDotCom!
+CreditCard class
+	instanceVariableNames: ''!
+
+!CreditCard class methodsFor: 'instance creation' stamp: 'tom 6/13/2025 20:52:26'!
+dated: aMonthAndYear 
+
+	^self new initializeDated: aMonthAndYear ! !
+
+
+!CreditCard class methodsFor: 'error message' stamp: 'tom 6/17/2025 17:55:08'!
+expiredCardMessageError
+	^'The card is Expired'! !
+
+
+!classDefinition: #SalesBook category: #TusLibrosDotCom!
+Object subclass: #SalesBook
+	instanceVariableNames: 'sales'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibrosDotCom'!
+
+!SalesBook methodsFor: 'initialization' stamp: 'tom 6/17/2025 19:58:04'!
+initialize
+	sales := Dictionary new! !
+
+
+!SalesBook methodsFor: 'assertion' stamp: 'tom 6/17/2025 20:27:26'!
+isEmpty
+	^sales isEmpty ! !
+
+
+!SalesBook methodsFor: 'cart visit' stamp: 'tom 6/17/2025 20:26:48'!
+visitsCartItems: aDictionaryOfBooks 
+	
+	| keys |
+	keys := aDictionaryOfBooks keys .
+	
+	keys  do:[:aKey | sales at: aKey put: (aDictionaryOfBooks at:aKey) ].! !
