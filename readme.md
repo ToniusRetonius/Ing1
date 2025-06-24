@@ -156,6 +156,6 @@ El libro de Design Patterns de Erich Gamma está [acá](https://github.com/Toniu
 
 - [Proxy Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Proxy.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Proxy_Pattern.pdf)
 
-- [Builder Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Builder.pdf)
+- [Builder Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Builder.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Builder_Pattern.pdf)
 
-- [Visitor Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Visitor.pdf)
+- [Visitor Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Visitor.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Visitor_Pattern.pdf)
