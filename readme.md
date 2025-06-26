@@ -58,6 +58,11 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 - Portfolio 2 (en mi solución faltó sacar unos ifs y reificar para que AccountSummary haga de 'Visitor'): [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/enunciado.pdf) [ Parte I : Transferencias](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/portfolio2-transferencias) [ Parte II : ReportesI](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/portfolio2-reportesI)
 
+- Mars Rover "el regreso" [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/04-%20Mars%20Rover%20-%20el%20regreso/Enunciado.md)
+
+## Parte 4 
+- TusLibros (falta terminar interface) : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/enunciado.pdf) [ Checkpoint 1 - cart](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-1-cart) [ Checkpoint 2 - credit card](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-2-credit-card) [ Checkpoint 3 - sales book](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-3-sales-book) [ Checkpoint 4 - merchant processor](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-4-merchant-processor)
+
 # Papers con Resumen
 - 1 : Programming as Theory Building (Naur)
 [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/1/Programming%20as%20Theory%20Building-1.pdf)
