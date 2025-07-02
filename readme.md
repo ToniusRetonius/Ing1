@@ -6,6 +6,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 - Teórica 2: [ Software y Desarrollo de Software](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/T2.pdf)
 - Papers para el primer parcial [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen%20papers%20primer%20parcial.pdf)
 
+- Papers y Patrones para el segundo parcial [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Segundo_Parcial.pdf)
+
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
