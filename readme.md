@@ -174,3 +174,7 @@ El libro de Design Patterns de Erich Gamma está [acá](https://github.com/Toniu
 - [Observer Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Observer.pdf)
 
 - [Mediator Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Mediator.pdf)
+
+# Práctica Segundo Parcial
+
+- 2C2024 : Pacman [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial%202%20-%20Pr%C3%A1ctica.pdf) [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial-2.st) [ Solve incompleto](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/solve%20incompleto.st)
