@@ -178,3 +178,5 @@ El libro de Design Patterns de Erich Gamma está [acá](https://github.com/Toniu
 # Práctica Segundo Parcial
 
 - 2C2024 : Pacman [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial%202%20-%20Pr%C3%A1ctica.pdf) [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial-2.st) [ Solve incompleto](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/solve%20incompleto.st) [ Respuestas teóricas](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/Respuestas_te%C3%B3ricas_2do_parcial_2c2024.pdf)
+
+- 1C2024 : Project [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/2024-1C-Parcial%202-Practica.pdf) [ Solve incompleto](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/solve-propio-incompleto.st) [ Solve Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/solve-c%C3%A1tedra.st)
