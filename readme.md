@@ -8,6 +8,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Papers y Patrones para el segundo parcial [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Segundo_Parcial.pdf)
 
+- Tipos de patrones de diseño (extraído del GoF) [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Tipos%20de%20patrones%20de%20dise%C3%B1o.pdf)
+
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
