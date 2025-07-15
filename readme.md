@@ -173,7 +173,7 @@ El libro de Design Patterns de Erich Gamma está [acá](https://github.com/Toniu
 
 - [State Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/State.pdf)
 
-- [Observer Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Observer.pdf)
+- [Observer Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Observer.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Observer_Pattern.pdf)
 
 - [Mediator Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Mediator.pdf)
 
