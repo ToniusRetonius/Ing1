@@ -10,6 +10,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Tipos de patrones de diseño (extraído del GoF) [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Tipos%20de%20patrones%20de%20dise%C3%B1o.pdf)
 
+- Active Variables in Smalltalk 80 [Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Extras/active-variables-in-smalltalk-80.pdf) [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Active_Variables_in_Smalltalk_80.pdf)
+
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
