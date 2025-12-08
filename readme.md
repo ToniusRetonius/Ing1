@@ -12,6 +12,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Active Variables in Smalltalk 80 [Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Extras/active-variables-in-smalltalk-80.pdf) [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Active_Variables_in_Smalltalk_80.pdf)
 
+- Metamodelo, Excepciones y Method Lookup [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Metamodelo_y_Method_Lookup.pdf)
+
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
