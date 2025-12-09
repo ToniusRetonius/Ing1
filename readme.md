@@ -119,6 +119,8 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 
 # Práctica Primer Parcial
+Están todos en [Parciales Ing1](https://github.com/UBA-FCEN-IngSoft1/Parciales)
+
 - 2C2021 : Sims City (los tests se pueden mejorar un poco más)
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-Parcial-1-Enunciado.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial.st)
@@ -169,6 +171,7 @@ El libro de Design Patterns de Erich Gamma está [acá](https://github.com/Toniu
 
 - [Facade Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Facade.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Facade_Pattern.pdf)
 # Práctica Segundo Parcial
+Están todos en [Parciales Ing1](https://github.com/UBA-FCEN-IngSoft1/Parciales)
 
 - 2C2024 : Pacman 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial%202%20-%20Pr%C3%A1ctica.pdf) 
