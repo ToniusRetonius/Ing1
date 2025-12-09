@@ -27,51 +27,45 @@ No están los .st (SmallTalk Source Code File)
 ## Parte 2 : Repeated Code - Double Dispatch - State / Strategy / Method Object Pattern
 Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo en determinado momento. 
 - Código repetido
-[Solución Propia](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve) 
 [Breve Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/01-C%C3%B3digo-Repetido/solve.pdf)
 
 
 - Replace If[ Enunciados](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs)
 
     - 01 - Type
-    [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/01-Replace-If-Type/1.Replace-if-Type(solve).st)
     [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/1.Replace-if-Type-Solucion.st)
 
-    - 02 - State[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/02-Replace-If-State/2.Replace-if-State(solve).st)
+    - 02 - State
     [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/2.Replace-if-State-Solucion.st)
     [Breve Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/solve.pdf)
 
     - 03 - Type + State 
-    [ Solución Propia ](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/03-Replace-If-Type%2BState/3.Replace-if-Type%2BState(solve).st)
     [ Solución Cátedra ](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/3.Replace-if-Type%2BState-Solucion.st)
 
     - 04 - Strategy 
-    [Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/04-Replace-If-Strat/4.Replace-if-Strategy(solve).st)
     [Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/02-SacarIfs/soluciones%20c%C3%A1tedra/4.Replace-if-Strategy-Solucion.st)
 
 - Números (opcional) [ Enunciados](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional))
-    - Pre-Números [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Exercise(solve).st)
-    - Número [Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
+    - Pre-Números [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Ejercicio%20(solve%20c%C3%A1tedra).st)
+    - Número [Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
 
 - Robot [Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/solve/IRobot-Enunciado(solve).st)
 
 - Stack [ Enunciado](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack)
-[ Solución Propia Ordered Collection](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(solve%20ordered-collection).st)
-[ Solución Propia Lista Enlazada](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Exercise(lista%20enlazada).st)
 [ Solución Cátedra State](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Solution-1.st)
 [ Solución Cátedra OOStackTop](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Solution-2.st)
 
 ## Parte 3 : TDD (Test Driven Development)
-- Mars Rover : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/Enunciado.pdf) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover(solve).st) [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover-Solucion-WithHeading.st)
+- Mars Rover : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/Enunciado.pdf)  [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/01%20-%20Mars%20Rover/MarsRover-Solucion-WithHeading.st)
 
-- Portfolio 1 : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Consigna.txt) [ Checkpoint 1](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/checkpoint-1.st) [ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/checkpoint-2.st) [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Portfolio-Solucion.st)
+- Portfolio 1 : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Consigna.txt) [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/02%20-%20Portfolio/Portfolio-Solucion.st)
 
-- Portfolio 2 (en mi solución faltó sacar unos ifs y reificar para que AccountSummary haga de 'Visitor'): [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/enunciado.pdf) [ Parte I : Transferencias](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/portfolio2-transferencias) [ Parte II : ReportesI](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/portfolio2-reportesI)
+- Portfolio 2 (en mi solución faltó sacar unos ifs y reificar para que AccountSummary haga de 'Visitor'): [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/03%20-%20Portfolio2/enunciado.pdf)
 
-- Mars Rover "el regreso" [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/04-%20Mars%20Rover%20-%20el%20regreso/Enunciado.md) [ Solución propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/04-%20Mars%20Rover%20-%20el%20regreso/window%20-%20checkpoint)
+- Mars Rover "el regreso" [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/04-%20Mars%20Rover%20-%20el%20regreso/Enunciado.md) 
 
 ## Parte 4 
-- TusLibros (falta terminar interface) : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/enunciado.pdf) [ Checkpoint 1 - cart](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-1-cart) [ Checkpoint 2 - credit card](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-2-credit-card) [ Checkpoint 3 - sales book](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-3-sales-book) [ Checkpoint 4 - merchant processor](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/checkpoint-4-merchant-processor)
+- TusLibros (falta terminar interface) : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/enunciado.pdf) 
 
 # Papers con Resumen
 - 1 : Programming as Theory Building (Naur)
@@ -125,41 +119,31 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 
 # Práctica Primer Parcial
-
 - 2C2021 : Sims City (los tests se pueden mejorar un poco más)
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-Parcial-1-Enunciado.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2021/ISW1-2021-2C-1erParcial(solve).st)
-
 - 1C2022 : Fórmula 1 (seguí el video de Hernán del repo con las soluciones para aprender su método de resolución (recomiendo mirarlos))
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-2C-Parcial-1-Enunciado-1.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2022/ISW1-2022-1C-Parcial-1(solve).st)
 
 - 2C2022 : Piratas (usé algo que no vimos en las clases para sacar código repetido en los tests, básicamente es devolver un literal de arreglo en un mensaje y después tomarle *first, second,...* para poder manipular los datos de forma desordenada luego )
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-Parcial-1-Enunciado.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2022/ISW1-2022-2C-1erParcial(solve).st)
-
 - 1C2023 : Perforaciones
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-1erParcial-ISW1-Perforaciones.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2023/ISW1-2023-1C-Parcial-1(solve).st)
 
 - 2C2023 : Penales
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2023/ISW1-2023-2C-1erParcial-ISW1-Penales.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2023/ISW1-2023-2C-Parcial-1.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2023/ISW1-2023-2C-Parcial-1(solve).st)
-
 - 1C2024 : Sims Hotels 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-1erParcial-Practica.pdf)
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-Parcial.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/1C2024/ISW1-2024-1C-Parcial(solve).st)
+
 
 - 2C2024 : Monstruos y Aventureros 
 [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial%201%20-%20Pr%C3%A1ctica.pdf) 
 [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1.st)
-[ Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/2024-2C-Parcial-1(solve).st)
 [ Respuestas Parte Teórica](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Primero/2C2024/Respuestas%20parte%20te%C3%B3rica.pdf)
 
 # Design Patterns
@@ -186,6 +170,13 @@ El libro de Design Patterns de Erich Gamma está [acá](https://github.com/Toniu
 - [Facade Pattern](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Patrones%20/Facade.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Resumen_Facade_Pattern.pdf)
 # Práctica Segundo Parcial
 
-- 2C2024 : Pacman [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial%202%20-%20Pr%C3%A1ctica.pdf) [ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial-2.st) [ Solve incompleto](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/solve%20incompleto.st) [ Respuestas teóricas](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/Respuestas_te%C3%B3ricas_2do_parcial_2c2024.pdf)
+- 2C2024 : Pacman 
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial%202%20-%20Pr%C3%A1ctica.pdf) 
+[ Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/2024-2C-Parcial-2.st)  [ Respuestas teóricas](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/2C2024/Respuestas_te%C3%B3ricas_2do_parcial_2c2024.pdf)
 
-- 1C2024 : Project [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/2024-1C-Parcial%202-Practica.pdf) [ Solve incompleto](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/solve-propio-incompleto.st) [ Solve Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/solve-c%C3%A1tedra.st)
+- 1C2024 : Project [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/2024-1C-Parcial%202-Practica.pdf) [ Solve Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2024/solve-c%C3%A1tedra.st)
+
+- 1C2025: Pintor 
+[ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2025/2025-1C-Parcial%202%20-%20Pra%CC%81ctica.pdf) 
+[Parcial.st](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2025/2025-1C-Parcial-2.st)
+[ Respuestas teóricas](https://github.com/ToniusRetonius/Ing1/blob/main/Parciales/Segundo/1C2025/Respuestas_te%C3%B3ricas_2do_parcial_1c2025.pdf)
