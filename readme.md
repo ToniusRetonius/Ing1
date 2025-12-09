@@ -16,7 +16,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Más sobre metamodelo y Method lookup en : [clase Hernan](https://www.youtube.com/watch?v=JqIFH_dn3ic&t=1032s) o en el cap 5 del [Blue Book](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/5/Bluebook.pdf)
 
-- Smalltalk-80 Object Model [Diagrama ]()
+- Smalltalk-80 Object Model [Diagrama ](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/smalltalk-80%20object%20model.png)
+
 - Más sobre excepciones [clase Hernan](https://www.youtube.com/watch?v=7wP-AuinuQk)
 
 # Prácticas
@@ -118,8 +119,7 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/13/resumen.md)
 [ Libro](https://github.com/ToniusRetonius/Ing1/blob/main/Bibliograf%C3%ADa/Modern%20Software%20Engineering.pdf)
 
-- 15 : Pattern Abuser [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/pattern-abuser.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/resumen.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/resumen.pdf)
-
+- 15 : Pattern Abuser [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/pattern-abuser.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/resumen.pdf) 
 
 - 17 : Respuesta Alan Kay [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/17/Alan%20Kay's%20answer%20to%20Was%20computing%20dumbed%20down%20by%20the%20arrival%20of%20computer%20science%20in%20academia_%20-%20Quora.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/17/resumen.md)
 # Práctica Primer Parcial
