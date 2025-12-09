@@ -47,9 +47,9 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 
 - Números (opcional) [ Enunciados](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional))
     - Pre-Números [ Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Pre-Numeros-Ejercicio%20(solve%20c%C3%A1tedra).st)
-    - Número [Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/Numero-Exercise(solve).st)
+    - Número [Solución Cátedra](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/03-N%C3%BAmeros(opcional)/solve/NumerosSolucion)
 
-- Robot [Solución Propia](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/solve/IRobot-Enunciado(solve).st)
+- Robot [Solución Cátedra](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/04-Robot/solve/IRobot-Solucion.st)
 
 - Stack [ Enunciado](https://github.com/ToniusRetonius/Ing1/tree/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack)
 [ Solución Cátedra State](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%202/05-Stack/solve/Stack-Solution-1.st)
@@ -65,7 +65,7 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 - Mars Rover "el regreso" [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%203/04-%20Mars%20Rover%20-%20el%20regreso/Enunciado.md) 
 
 ## Parte 4 
-- TusLibros (falta terminar interface) : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/enunciado.pdf) 
+- TusLibros (me falta terminar interface) : [ Enunciado](https://github.com/ToniusRetonius/Ing1/blob/main/Gu%C3%ADas%20Pr%C3%A1cticas/Parte%204/01%20-%20TusLibros/enunciado.pdf) 
 
 # Papers con Resumen
 - 1 : Programming as Theory Building (Naur)
