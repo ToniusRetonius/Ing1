@@ -14,6 +14,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Metamodelo, Excepciones y Method Lookup [Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Res%C3%BAmenes/Metamodelo_y_Method_Lookup.pdf)
 
+- Más sobre metamodelo y Method lookup en : [clase Hernan](https://www.youtube.com/watch?v=JqIFH_dn3ic&t=1032s) o en el cap 5 del [Blue Book](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/5/Bluebook.pdf)
+
 # Prácticas
 Un detalle de las prácticas es que, si bien hay casos en los que los tests pasan. El modelado es incorrecto. Es importante hacer este *discalimer* y evitar confusiones de la *"resolución"* de cierto ejercicio. 
 
