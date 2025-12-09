@@ -16,6 +16,8 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Más sobre metamodelo y Method lookup en : [clase Hernan](https://www.youtube.com/watch?v=JqIFH_dn3ic&t=1032s) o en el cap 5 del [Blue Book](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/5/Bluebook.pdf)
 
+- Más sobre excepciones [clase Hernan](https://www.youtube.com/watch?v=7wP-AuinuQk)
+
 # Prácticas
 Un detalle importante a tener en cuenta en la resolución de los ejercicios es *siempre recordar las heurísticas de diseño*. Es decir, objetos completos, modularidad, objetos cohesivos (asignar adecuadamente sus responsabilidades), no acoplar innecesariamente y siempre siempre intentar ser buenos diseñadores  (entender bien el dominio del problema nos va a permitir representar adecuadamente los objetos en nuestro sistema)
 
