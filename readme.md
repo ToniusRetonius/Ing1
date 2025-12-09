@@ -16,6 +16,7 @@ Cursada 1c 2025 de Ingeniería de Software I
 
 - Más sobre metamodelo y Method lookup en : [clase Hernan](https://www.youtube.com/watch?v=JqIFH_dn3ic&t=1032s) o en el cap 5 del [Blue Book](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/5/Bluebook.pdf)
 
+- Smalltalk-80 Object Model [Diagrama ]()
 - Más sobre excepciones [clase Hernan](https://www.youtube.com/watch?v=7wP-AuinuQk)
 
 # Prácticas
