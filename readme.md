@@ -118,7 +118,7 @@ Están los .st y en algunos casos, un breve repaso teórico sobre qué se hizo e
 - 15 : Pattern Abuser [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/pattern-abuser.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/resumen.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/15/resumen.pdf)
 
 
-- 17 : Respuesta Alan Kay [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/17/Alan%20Kay's%20answer%20to%20Was%20computing%20dumbed%20down%20by%20the%20arrival%20of%20computer%20science%20in%20academia_%20-%20Quora.pdf)
+- 17 : Respuesta Alan Kay [ Paper](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/17/Alan%20Kay's%20answer%20to%20Was%20computing%20dumbed%20down%20by%20the%20arrival%20of%20computer%20science%20in%20academia_%20-%20Quora.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Papers/17/resumen.md)
 # Práctica Primer Parcial
 Están todos en [Parciales Ing1](https://github.com/UBA-FCEN-IngSoft1/Parciales)
 
