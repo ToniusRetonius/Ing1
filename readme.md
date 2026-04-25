@@ -192,9 +192,9 @@ Están todos en [Parciales Ing1](https://github.com/UBA-FCEN-IngSoft1/Parciales)
 
 # Final
 Los temas para el final incluyen 4 papers 
-- [No silver bullet](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/No%20Silver%20Bullet/No_Silver_Bullet.pdf)
+- [No silver bullet](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/No%20Silver%20Bullet/No_Silver_Bullet.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/No%20Silver%20Bullet/resumen.md)
 - [The early history of smalltalk](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/The%20early%20history%20of%20smalltalk/The%20early%20history%20of%20smalltalk.pdf)
-- [Programming as theory building](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/Programming%20as%20theory%20building/Programming%20as%20Theory%20Building.pdf)
+- [Programming as theory building](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/Programming%20as%20theory%20building/Programming%20as%20Theory%20Building.pdf) [ Resumen](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/Programming%20as%20theory%20building/resumen.md)
 - [What is software design](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Papers/What%20is%20software%20design/Whatis%20software%20design.pdf)
 
 Podemos encontrar, para practicar, este [Compilado](https://github.com/ToniusRetonius/Ing1/blob/main/Final/compilado%20preguntas.pdf) y [Preguntas tipo final](https://github.com/ToniusRetonius/Ing1/blob/main/Final/Preguntas_final.pdf)
